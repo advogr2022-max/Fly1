@@ -1,0 +1,231 @@
+C:\t3\Fly1\app\src\main\java\android\support\v4\content\FileProvider.java:270: error: cannot find symbol
+    public ParcelFileDescriptor openFile(Uri uri, String str) throws FileNotFoundException {
+                                                                     ^
+  symbol:   class FileNotFoundException
+  location: class FileProvider
+C:\t3\Fly1\app\src\main\java\android\support\v4\media\MediaBrowserCompat.java:18: error: constructor C0026b in class C0026b cannot be applied to given types;
+    private static class CustomActionResultReceiver extends C0026b {
+                   ^
+  required: Parcel
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+C:\t3\Fly1\app\src\main\java\android\support\v4\media\MediaBrowserCompat.java:53: error: constructor C0026b in class C0026b cannot be applied to given types;
+    private static class ItemReceiver extends C0026b {
+                   ^
+  required: Parcel
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+C:\t3\Fly1\app\src\main\java\android\support\v4\media\MediaBrowserCompat.java:124: error: constructor C0026b in class C0026b cannot be applied to given types;
+    private static class SearchResultReceiver extends C0026b {
+                   ^
+  required: Parcel
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+C:\t3\Fly1\app\src\main\java\android\support\v4\obf_v4_c\AbstractC0029c.java:89: error: incompatible types: AbstractC0029c cannot be converted to K
+                AbstractC0029c.this.mo91a((AbstractC0029c) entry.getKey(), (K) entry.getValue());
+                                          ^
+  where K is a type-variable:
+    K extends Object declared in class AbstractC0029c
+C:\t3\Fly1\app\src\main\java\android\support\v4\obf_v4_c\AbstractC0029c.java:357: error: incompatible types: int cannot be converted to V
+                return (V) AbstractC0029c.this.mo89a(this.f151b, (int) v);
+                                                                 ^
+  where V is a type-variable:
+    V extends Object declared in class AbstractC0029c
+C:\t3\Fly1\app\src\main\java\android\support\v4\obf_v4_c\AbstractC0029c.java:552: error: incompatible types: Object cannot be converted to T
+            tArr[i3] = mo88a(i3, i2);
+                            ^
+  where T is a type-variable:
+    T extends Object declared in method <T>m101a(T[],int)
+C:\t3\Fly1\app\src\main\java\android\support\v4\obf_v4_c\C0027a.java:39: error: incompatible types: int cannot be converted to V
+                    return C0027a.this.m114a(i2, (int) v);
+                                                 ^
+  where V is a type-variable:
+    V extends Object declared in class C0027a
+C:\t3\Fly1\app\src\main\java\android\support\v4\media\session\MediaControllerCompat.java:39: error: constructor ResultReceiver in class ResultReceiver cannot be applied to given types;
+        private static class ExtraBinderRequestResultReceiver extends ResultReceiver {
+                       ^
+  required: Handler
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+C:\t3\Fly1\app\src\main\java\com\xcglobe\xclog\ActivityCloudPicker.java:84: error: int cannot be dereferenced
+            C0227a.m988a(new File(string).getName().substring(0, r3.length() - 4));
+                                                                   ^
+C:\t3\Fly1\app\src\main\java\com\xcglobe\xclog\C0092c.java:88: error: incompatible types: int cannot be converted to String
+                str = String.valueOf(C0101l.f520E.format(C0377q.m1278a(String.valueOf(C0101l.m573i(r5))))) + " " + C0377q.f2082a;
+                                                                                                   ^
+C:\t3\Fly1\app\src\main\java\com\xcglobe\xclog\ActivityInfo.java:130: error: incompatible types: int cannot be converted to String
+                str3 = C0101l.f520E.format(C0377q.m1281b(String.valueOf(C0101l.m573i(r1)))) + " " + C0377q.f2084c + " [OLC task]";
+                                                                                     ^
+C:\t3\Fly1\app\src\main\java\mymenu\DialogC0241a.java:72: error: cannot find symbol
+                if (this.mo588a(c0242b.f1503c[i2].f1505a)) {
+                        ^
+  symbol: method mo588a(int)
+C:\t3\Fly1\app\src\main\java\mymenu\DialogC0241a.java:73: error: cannot find symbol
+                    this.dismiss();
+                        ^
+  symbol: method dismiss()
+C:\t3\Fly1\app\src\main\java\configs\ActivityConfigTask.java:228: error: int cannot be dereferenced
+            this.f665b.f1279c.get(this.f670g).f1317g = !r0.f1317g;
+                                                          ^
+C:\t3\Fly1\app\src\main\java\flyme_poi\C0227a.java:494: error: incompatible types: possible lossy conversion from float to long
+        return (C0369i.m1248b(c0229c.f1976i, c0229c.f1977j, c0229c2.f1318h.f2053a, c0229c2.f1318h.f2054b) * 1000.0f) / (C0101l.f528M / 3600.0f);
+                                                                                                                     ^
+C:\t3\Fly1\app\src\main\java\display\ViewSwipeButton.java:81: error: int cannot be dereferenced
+                ViewSwipeButton.this.scrollOffset = (int) (r0.scrollOffset + f2);
+                                                             ^
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0001b.java:184: error: cannot find symbol
+                e = e3;
+                ^
+  symbol:   variable e
+  location: class C0001b
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0001b.java:185: error: cannot find symbol
+                e.printStackTrace();
+                ^
+  symbol:   variable e
+  location: class C0001b
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0001b.java:191: error: cannot find symbol
+            e = e4;
+            ^
+  symbol:   variable e
+  location: class C0001b
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0001b.java:194: error: cannot find symbol
+            e = e5;
+            ^
+  symbol:   variable e
+  location: class C0001b
+C:\t3\Fly1\app\src\main\java\display\vmap\boxes\BoxCompetitionTask.java:132: error: incompatible types: possible lossy conversion from float to long
+            j2 = ((C0366f.f2004b * 3600.0f) / m893a) * 1.0f;
+                                                     ^
+C:\t3\Fly1\app\src\main\java\display\vmap\boxes\BoxOlcScore.java:53: error: incompatible types: int cannot be converted to String
+            if (C0099j.m529f(m1077h, "km" + m530g).length() > 0 && (m1278a = (int) (C0377q.m1278a(Integer.parseInt(r0)) + 0.5f)) > 0) {
+                                                                                                                   ^
+C:\t3\Fly1\app\src\main\java\flyme_io\C0217b.java:91: error: incompatible types: possible lossy conversion from int to short
+            short s2 = 99999;
+                       ^
+C:\t3\Fly1\app\src\main\java\flyme_collection\C0192a.java:24: error: incompatible types: CAP#1 cannot be converted to E
+                ((E[]) this.f948a)[i3] = e2.getClass().newInstance();
+                                                                  ^
+  where E is a type-variable:
+    E extends Object declared in class C0192a
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ? extends Object
+C:\t3\Fly1\app\src\main\java\flyme_device\DialogC0171c.java:98: error: int cannot be dereferenced
+                C0172d.m665a(DialogC0171c.this.f748b.getApplicationContext(), C0099j.m521b("external_devmodel"), ((TextView) view).getText().toString().substring(r1.length() - 17), DialogC0171c.this.f757k, DialogC0171c.this.f748b);
+                                                                                                                                                                    ^
+C:\t3\Fly1\app\src\main\java\flyme_device\C0183o.java:94: error: cannot find symbol
+                        e = e5;
+                        ^
+  symbol:   variable e
+  location: class a
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0002c.java:169: error: cannot find symbol
+                    e = e3;
+                    ^
+  symbol:   variable e
+  location: class C0002c
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0002c.java:172: error: cannot find symbol
+                    e.printStackTrace();
+                    ^
+  symbol:   variable e
+  location: class C0002c
+C:\t3\Fly1\app\src\main\java\flyme_fileutil\C0002c.java:182: error: cannot find symbol
+            e = e4;
+            ^
+  symbol:   variable e
+  location: class C0002c
+C:\t3\Fly1\app\src\main\java\flyme_poi\C0230d.java:40: error: cannot find symbol
+                e = e3;
+                ^
+  symbol:   variable e
+  location: class C0230d
+C:\t3\Fly1\app\src\main\java\flyme_poi\C0230d.java:41: error: cannot find symbol
+                e.printStackTrace();
+                ^
+  symbol:   variable e
+  location: class C0230d
+C:\t3\Fly1\app\src\main\java\flyme_poi\C0230d.java:47: error: cannot find symbol
+            e = e4;
+            ^
+  symbol:   variable e
+  location: class C0230d
+C:\t3\Fly1\app\src\main\java\flyme_poi\C0230d.java:50: error: cannot find symbol
+            e = e5;
+            ^
+  symbol:   variable e
+  location: class C0230d
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0063d.java:296: error: int cannot be dereferenced
+                String substring = file.getName().substring(0, r7.length() - 4);
+                                                                 ^
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0064e.java:101: error: cannot find symbol
+                this.f283b = true;
+                    ^
+  symbol: variable f283b
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0064e.java:102: error: cannot find symbol
+                this.f282a.dismiss();
+                    ^
+  symbol: variable f282a
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0064e.java:103: error: cannot find symbol
+                this.cancel(true);
+                    ^
+  symbol: method cancel(boolean)
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:64: error: incompatible types: possible lossy conversion from float to long
+        return (f2 * 1000.0f * 500000) + (f3 * 1000.0f);
+                                       ^
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:195: error: cannot find symbol
+                e = e3;
+                ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:196: error: cannot find symbol
+                e.printStackTrace();
+                ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:201: error: cannot find symbol
+            e = e4;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:204: error: cannot find symbol
+            e = e5;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:284: error: cannot find symbol
+            e = e2;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:287: error: cannot find symbol
+            e = e3;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:294: error: cannot find symbol
+            e = e4;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:295: error: cannot find symbol
+            e.printStackTrace();
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:299: error: cannot find symbol
+            e = e5;
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\AsyncTaskC0066g.java:300: error: cannot find symbol
+            e.printStackTrace();
+            ^
+  symbol:   variable e
+  location: class AsyncTaskC0066g
+C:\t3\Fly1\app\src\main\java\flyme_tasks\C0062c.java:117: error: incompatible types: possible lossy conversion from float to long
+                    Thread.sleep(f2);
+                                 ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+50 errors

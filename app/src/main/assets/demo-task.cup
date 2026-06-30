@@ -1,0 +1,12 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
+"Sorica",,,4613.872N,01401.308E,1169m,,,,,
+"T2",,,4616.134N,01347.040E,1607m,,,,,
+"Kneza",,,4610.139N,01350.100E,0m,,,,,
+"Podbrdo",,,4612.539N,01357.839E,0m,,,,,
+-----Related Tasks-----
+"demo-task","","Sorica","T2","Kneza","Podbrdo",""
+Options,StartOnEntry=True,GoalIsLine=True,Competition=True,NoStart=00:05:00,NoEnd=23:30:00
+ObsZone=0,R1=400m,sss=True
+ObsZone=1,R1=2500m
+ObsZone=2,R1=400m
+ObsZone=3,R1=400m,ess=True

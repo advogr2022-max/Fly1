@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.xcglobe.flyme'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.xcglobe.flyme"
+        minSdk 14
+        targetSdk 26
+        versionCode 39
+        versionName "3.12 Beta"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+    }
+
+    aaptOptions {
+        // Skip compilation via aapt2 to work around Windows path bug
+        cruncherEnabled = false
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.tools.build:bundletool:1.16.0'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:support-core-utils:26.1.0'
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_task" android:key="titleCategory">
+        <EditTextPreference android:title="@string/task_name" android:key="task_name" android:order="1" />
+        <CheckBoxPreference android:title="@string/competition_task" android:key="competition_task" android:order="2" />
+        <Preference android:title="@string/task_start" android:key="task_start" android:order="3" />
+        <Preference android:title="@string/task_end" android:key="task_end" android:order="4" /> /> <Preference android:title="@string/add_task_point" android:key="task_insert_point" android:order="6" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/points" android:key="targetCategory" />
+    <PreferenceCategory android:title="@string/task_distance">
+        <configs.prefitems.TaskPointSummaryPreference android:key="point_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

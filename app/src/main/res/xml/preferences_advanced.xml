@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_advanced" android:key="advCategory">
+        <Preference android:title="@string/airspace_set" android:key="openair_options" android:summary="@string/airspace_set_desc" />
+        <Preference android:title="@string/menu_glider" android:key="glider_options" android:summary="@string/menu_glider_desc" />
+        <Preference android:title="@string/menu_igc" android:key="igc_options" android:summary="@string/menu_igc_desc" />
+        <Preference android:title="@string/menu_vario" android:key="vario_options" android:summary="@string/menu_vario_desc" />
+        <Preference android:title="@string/menu_unit" android:key="units_options" android:summary="@string/menu_unit_desc" />
+        <ListPreference android:entries="@array/optimizing_interval_entries" android:title="@string/optimizing_interval" android:key="optimizer_interval" android:summary="@string/optimizing_interval_desc" android:defaultValue="1" android:entryValues="@array/optimizing_interval_values" />
+        <ListPreference android:entries="@array/font_size_entries" android:title="@string/font_size" android:key="font_size" android:summary="@string/font_size_desc" android:defaultValue="0" android:entryValues="@array/font_size_values" />
+        <ListPreference android:entries="@array/infoboxes_size_entries" android:title="@string/infoboxes_size" android:key="infoboxes_size" android:summary="@string/infoboxes_size_desc" android:defaultValue="3" android:entryValues="@array/infoboxes_size_values" />
+        <ListPreference android:description="@string/use_external_device_desc" android:entries="@array/external_devmodel_entries" android:title="@string/use_external_device" android:key="external_devmodel" android:summary="@string/use_external_device_desc" android:defaultValue="0" android:entryValues="@array/external_devmodel_values" />
+        <CheckBoxPreference android:title="@string/use_barometer" android:key="use_barometer" android:summary="@string/use_barometer_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/enable_thermal_view" android:key="enable_thermal_view" android:summary="@string/enable_thermal_view_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/enable_fai_assistant" android:key="enable_fai_assistant" android:summary="@string/enable_fai_assistant_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/enable_map_view" android:key="enable_map_view" android:summary="@string/enable_map_view_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/use_sd" android:key="sd_card" android:summary="@string/use_sd_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="GPS filtering" android:key="gps_use_filter" android:summary="Enable GPS kalman filter" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Use GPS speed" android:key="use_gps_speed" android:summary="Use internal GPS calculated speed" android:defaultValue="true" />
+        <Preference android:title="@string/show_datalist" android:key="show_datalist" android:summary="@string/show_datalist_desc" />
+    </PreferenceCategory>
+</PreferenceScreen>

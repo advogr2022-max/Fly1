@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center_horizontal" android:id="@id/pocket_textView1" android:background="@color/backgray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pocket_title" />
+    <TextView android:id="@id/pocket_textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/pocket_description" android:layout_below="@id/pocket_textView1" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/pocket_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/status" android:layout_below="@id/pocket_textView2" />
+    <CheckBox android:id="@id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/enable_livetrack" android:layout_below="@id/pocket_status" android:layout_alignLeft="@id/pocket_textView2" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/pocket_button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pocket_button" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:onClick="btnNormalMode" />
+</RelativeLayout>

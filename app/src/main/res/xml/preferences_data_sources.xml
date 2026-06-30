@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/options" android:key="datasrcOptionsCategory">
+        <ListPreference android:description="@string/mapset" android:entries="@array/mapset_entries" android:title="@string/mapset" android:key="mapset" android:defaultValue="0" android:entryValues="@array/mapset_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/data_sources" android:key="targetCategory" />
+</PreferenceScreen>

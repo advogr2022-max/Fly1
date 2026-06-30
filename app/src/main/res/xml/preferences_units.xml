@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/unit_distance" android:title="@string/distance" android:key="unit_distance" android:defaultValue="0" android:entryValues="@array/unit_distance_values" />
+    <ListPreference android:entries="@array/unit_altitude" android:title="@string/altitude" android:key="unit_altitude" android:defaultValue="0" android:entryValues="@array/unit_altitude_values" />
+    <ListPreference android:entries="@array/unit_speed" android:title="@string/speed" android:key="unit_speed" android:defaultValue="0" android:entryValues="@array/unit_speed_values" />
+    <ListPreference android:entries="@array/unit_vario" android:title="@string/vario" android:key="unit_vario" android:defaultValue="0" android:entryValues="@array/unit_vario_values" />
+</PreferenceScreen>

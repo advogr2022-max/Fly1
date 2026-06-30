@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/backgray2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <view android:id="@id/swipeBoxes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" class="display.ViewSwipeButton" />
+        <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:baselineAligned="false">
+            <Button android:gravity="center" android:layout_gravity="center" android:id="@id/btnAddBox" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:layout_height="56.0dip" android:text="@string/add_infobox" android:singleLine="true" android:drawableLeft="@drawable/ic_input_add" android:drawablePadding="2.0dip" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:layout_gravity="center" android:id="@id/btnRemoveBoxes" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:layout_height="56.0dip" android:text="@string/remove_all_boxes" android:singleLine="true" android:drawableLeft="@drawable/ic_delete" android:drawablePadding="2.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <view android:id="@id/swipe2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" class="display.ViewSwipeButton" />
+        <LinearLayout android:id="@id/linearLayout3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <Button android:id="@id/buttonPocket" android:layout_width="0.0dip" android:layout_height="56.0dip" android:text="@string/pocket_title" android:layout_weight="1.0" />
+            <Button android:id="@id/buttonGoal" android:layout_width="0.0dip" android:layout_height="56.0dip" android:text="@string/goal" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/linearLayout4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:baselineAligned="false">
+            <Button android:id="@id/buttonMulti" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:layout_gravity="center" android:id="@id/buttonSettings" android:paddingLeft="8.0dip" android:paddingRight="18.0dip" android:layout_width="0.0dip" android:layout_height="56.0dip" android:text="@string/options" android:singleLine="true" android:drawableLeft="@drawable/options" android:drawablePadding="2.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <Button android:id="@id/btnStartRecording" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/start_recording" />
+        <Button android:id="@id/btnQuit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/quit" />
+    </LinearLayout>
+</ScrollView>

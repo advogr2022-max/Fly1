@@ -1,0 +1,4 @@
+C:\t3\Fly1\app\src\main\java\display\vmap\boxes\BoxGroundProfile.java:356: error: <identifier> expected
+    protected boolean isTimeRotatable(boolean ) {
+                                             ^
+1 error

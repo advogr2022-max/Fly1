@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/dlg_goal_layout" android:background="@color/back2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/dlg_goal_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/dlg_goal_btn_opt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/options" android:layout_weight="5.0" />
+        <Button android:layout_gravity="right" android:id="@id/dlg_goal_btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="5.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/dlg_goal_layout_flags" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <ToggleButton android:id="@id/dlg_goal_btn_enable_search" android:background="@drawable/search48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:textOn="" android:textOff="" />
+        <ToggleButton android:id="@id/dlg_goal_btn_poi_geo" android:background="@drawable/btn_poi_geo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="" android:textOff="" />
+        <ToggleButton android:id="@id/dlg_goal_btn_poi_site" android:background="@drawable/btn_poi_site" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="" android:textOff="" />
+        <ToggleButton android:id="@id/dlg_goal_btn_poi_livetrack" android:background="@drawable/btn_poi_livetrack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="" android:textOff="" />
+        <ToggleButton android:id="@id/dlg_goal_btn_poi_waypoints" android:background="@drawable/btn_poi_waypoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="" android:textOff="" />
+    </LinearLayout>
+    <EditText android:id="@id/inputSearch" android:background="#ffffffe0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="48.0dip" android:hint="@string/search" android:singleLine="true" android:drawableLeft="@drawable/search32gray" android:inputType="textVisiblePassword" />
+    <ListView android:id="@id/dlg_goal_goal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" android:layout_marginRight="48.0dip" android:layout_marginBottom="0.0dip" android:layout_above="@id/dlg_goal_buttons" android:layout_below="@id/inputSearch" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

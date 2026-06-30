@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_igc">
+        <ListPreference android:entries="@array/movement_detection_type_entries" android:title="@string/movement_detection_type" android:key="movement_detection_type" android:summary="@string/movement_detection_type_desc" android:defaultValue="0" android:entryValues="@array/movement_detection_type_values" />
+        <ListPreference android:entries="@array/logging_interval_entries" android:title="@string/logging_interval" android:key="logging_interval" android:defaultValue="4" android:entryValues="@array/logging_interval_values" />
+        <EditTextPreference android:title="@string/pilotname" android:key="user.fullname" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/civlid" android:key="user.civlid" />
+        <EditTextPreference android:title="@string/target_email" android:key="user.email_igc" android:summary="@string/target_email_desc" />
+        <CheckBoxPreference android:title="@string/auto_export_igc" android:key="auto_export_igc" android:summary="@string/auto_export_igc_desc" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

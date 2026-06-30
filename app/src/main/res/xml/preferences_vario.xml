@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/vario_volumes_entries" android:title="@string/vario_volume" android:key="vario_volume" android:summary="@string/vario_volume_desc" android:defaultValue="100" android:entryValues="@array/vario_volumes_values" />
+    <ListPreference android:entries="@array/vario_interval_entries" android:title="@string/vario_interval" android:key="vario_interval" android:summary="@string/vario_interval_desc" android:defaultValue="0" android:entryValues="@array/vario_interval_values" />
+    <EditTextPreference android:digits="01234567890.-" android:title="@string/sink_tone" android:key="sink_tone" android:defaultValue="-3.0" android:inputType="numberDecimal" />
+    <CheckBoxPreference android:title="@string/vario_kalman" android:key="barometer_kalman_vario" android:summary="@string/vario_kalman_desc" android:defaultValue="true" />
+    <CheckBoxPreference android:title="@string/stabilize_vario" android:key="barometer_stabilize_vario" android:summary="@string/stabilize_vario_desc" android:defaultValue="true" />
+</PreferenceScreen>

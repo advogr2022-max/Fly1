@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_power">
+        <ListPreference android:entries="@array/screen_power_mode_entries" android:title="@string/keep_screen_on" android:key="screen_power_mode" android:summary="@string/keep_screen_on_desc" android:defaultValue="0" android:entryValues="@array/screen_power_mode_values" />
+        <ListPreference android:entries="@array/event_refresh_rate_entries" android:title="@string/event_refresh_rate" android:key="event_refresh_rate" android:summary="@string/event_refresh_rate_desc" android:defaultValue="300" android:entryValues="@array/event_refresh_rate_values" />
+        <CheckBoxPreference android:title="@string/real_time_refresh_rate_thermaling" android:key="real_time_refresh_rate_thermaling" android:summary="@string/real_time_refresh_rate_thermaling_desc" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/enable_pocket_livetrack" android:key="enable_pocket_livetrack" android:summary="@string/enable_pocket_livetrack_desc" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

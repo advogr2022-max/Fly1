@@ -1,0 +1,7 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
+"My Point 1",MyPoint1,,4647.340N,01323.580E,1547.0m,1,,,,
+"My Point 2",MyPoiint,,4647.040N,01322.740E,1190.0m,1,,,,
+"My Point 3",T11,,4645.900N,01322.740E,1449.0m,1,,,,
+"My Point 4",MyPoint4,,4644.280N,01323.580E,2117.0m,1,,,,
+"My Point 5",MyPoint5,,4645.840N,01327.360E,1970.0m,1,,,,
+-----Related Tasks-----

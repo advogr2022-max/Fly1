@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_sound">
+        <ListPreference android:entries="@array/vario_volumes_entries" android:title="@string/vario_volume" android:key="vario_volume" android:summary="@string/vario_volume_desc" android:defaultValue="100" android:entryValues="@array/vario_volumes_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/graphic_display">
+        <ListPreference android:entries="@array/maps_colors_entries" android:title="@string/maps_colors" android:key="maps_colors" android:summary="@string/maps_colors_desc" android:defaultValue="0" android:entryValues="@array/maps_colors_values" />
+        <CheckBoxPreference android:title="@string/vario_helpers" android:key="display_vario_helpers" android:summary="@string/vario_helpers_desc" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/menu_display_general">
+        <CheckBoxPreference android:title="@string/full_screen" android:key="full_screen" android:summary="@string/full_screen_desc" android:defaultValue="false" />
+        <ListPreference android:entries="@array/screen_orientations_entries" android:title="@string/screen_orientation" android:key="screen_orientation" android:summary="@string/screen_orientation_desc" android:defaultValue="0" android:entryValues="@array/screen_orientations_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

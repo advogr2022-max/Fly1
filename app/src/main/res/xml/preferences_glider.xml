@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_glider">
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_min_speed" android:key="glider_min_speed" android:defaultValue="25" android:inputType="numberDecimal" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_min_speed_sink" android:key="glider_min_speed_sink" android:defaultValue="1.0" android:inputType="numberDecimal" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_optimal_speed" android:key="glider_optimal_speed" android:defaultValue="38" android:inputType="numberDecimal" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_optimal_speed_sink" android:key="glider_optimal_speed_sink" android:defaultValue="1.1" android:inputType="numberDecimal" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_max_speed" android:key="glider_max_speed" android:defaultValue="55" android:inputType="numberDecimal" />
+        <EditTextPreference android:digits="01234567890." android:title="@string/glider_max_speed_sink" android:key="glider_max_speed_sink" android:defaultValue="3.0" android:inputType="numberDecimal" />
+        <ListPreference android:entries="@array/gtypes_entries" android:title="@string/gtype" android:key="user.gtype" android:entryValues="@array/gtypes_values" />
+        <EditTextPreference android:title="@string/gmodel" android:key="user.glider" />
+    </PreferenceCategory>
+</PreferenceScreen>

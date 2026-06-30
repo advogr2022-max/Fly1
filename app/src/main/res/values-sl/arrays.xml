@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="event_refresh_rate_entries">
+        <item>V realnem času</item>
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>3 sec</item>
+    </string-array>
+    <string-array name="event_refresh_rate_values">
+        <item>300</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+    </string-array>
+    <string-array name="external_devmodel_entries">
+        <item>None</item>
+        <item>BlueFly, Flynet, Other BT</item>
+        <item>SensBox BLE</item>
+        <item>XC tracer BLE</item>
+        <item>FlySys</item>
+        <item>USB/OTCdevice</item>
+        <item>USB/TCP device</item>
+        <item>Other BT</item>
+    </string-array>
+    <string-array name="external_devmodel_values">
+        <item>0</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="font_size_entries">
+        <item>Večja</item>
+        <item>Srednja</item>
+        <item>Manjša</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="gtypes_entries">
+        <item>Padalo</item>
+        <item>HG Flex</item>
+        <item>HG trdokrilec</item>
+        <item>Jadrilica</item>
+        <item>PPG nahrbtni</item>
+        <item>PPG na kolesih</item>
+    </string-array>
+    <string-array name="gtypes_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="infoboxes_size_entries">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="infoboxes_size_values">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="leonardo_server_entries">
+        <item>International XC</item>
+        <item>DHV XC Contest</item>
+        <item>Argentina XC</item>
+        <item>Australia</item>
+        <item>Brazilian Leonardo</item>
+        <item>Bulgarian - Skynomad</item>
+        <item>Colombian XC</item>
+        <item>Chilian XC</item>
+        <item>Czech XC</item>
+        <item>Greek XC</item>
+        <item>Isreali XC</item>
+        <item>Kyrgyzstan XC</item>
+        <item>Poland XC</item>
+        <item>Portugal XC</item>
+        <item>Rocky Mountain XC</item>
+        <item>Russian XC</item>
+        <item>Turkish XC</item>
+        <item>Ukrainian XC</item>
+    </string-array>
+    <string-array name="leonardo_server_values">
+        <item>inter</item>
+        <item>dhv</item>
+        <item>argen</item>
+        <item>aust</item>
+        <item>braz</item>
+        <item>bulg</item>
+        <item>colom</item>
+        <item>chile</item>
+        <item>czech</item>
+        <item>greek</item>
+        <item>isreal</item>
+        <item>kyrg</item>
+        <item>pola</item>
+        <item>port</item>
+        <item>rocky</item>
+        <item>russ</item>
+        <item>turk</item>
+        <item>ukra</item>
+    </string-array>
+    <string-array name="livetrack_entries">
+        <item>5 sec</item>
+        <item>10 sec</item>
+        <item>20 sec</item>
+        <item>1 min</item>
+        <item>5 min</item>
+        <item>10 min</item>
+    </string-array>
+    <string-array name="livetrack_server_entries">
+        <item>xcglobe.com</item>
+    </string-array>
+    <string-array name="livetrack_server_values">
+        <item>0</item>
+    </string-array>
+    <string-array name="livetrack_values">
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>600000</item>
+    </string-array>
+    <string-array name="logging_interval_entries">
+        <item>1 sekunda</item>
+        <item>2 sekundi</item>
+        <item>4 sekunde</item>
+        <item>8 sekund</item>
+    </string-array>
+    <string-array name="logging_interval_values">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="maps_colors_entries">
+        <item>@string/ar_default</item>
+        <item>@string/ar_striped_colors</item>
+        <item>@string/ar_mono_colors</item>
+    </string-array>
+    <string-array name="maps_colors_values">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="mapset_entries">
+        <item>@string/mapset_1</item>
+        <item>@string/mapset_0</item>
+    </string-array>
+    <string-array name="mapset_values">
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="movement_detection_type_entries">
+        <item>@string/ar_paraglider</item>
+        <item>@string/ar_hangglider</item>
+        <item>@string/ar_walking</item>
+        <item>@string/ar_car</item>
+        <item>@string/ar_manual</item>
+    </string-array>
+    <string-array name="movement_detection_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="optimizing_interval_entries">
+        <item>Vsako 1 min</item>
+        <item>Vsakih 5 min</item>
+        <item>Vsakih 10 min</item>
+        <item>Vsakih 20 min</item>
+        <item>Nikoli</item>
+    </string-array>
+    <string-array name="optimizing_interval_values">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="screen_orientations_entries">
+        <item>Privzeto</item>
+        <item>Pokončno</item>
+        <item>Ležeče</item>
+    </string-array>
+    <string-array name="screen_orientations_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="screen_power_mode_entries">
+        <item>Zaslon prižgan ves čas</item>
+        <item>Prižgi med vrtenjem stebra</item>
+        <item>Privzeto delovanje naprave</item>
+    </string-array>
+    <string-array name="screen_power_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="server_entries">
+        <item>xcglobe.com</item>
+        <item>Leonardo servers</item>
+    </string-array>
+    <string-array name="server_values">
+        <item>xcglobe</item>
+        <item>leo_</item>
+    </string-array>
+    <string-array name="task_goal_type">
+        <item>LINE</item>
+        <item>CYLINDER</item>
+    </string-array>
+    <string-array name="task_start_mode">
+        <item>ENTER</item>
+        <item>EXIT</item>
+    </string-array>
+    <string-array name="unit_altitude">
+        <item>Meter</item>
+        <item>Foot</item>
+    </string-array>
+    <string-array name="unit_altitude_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="unit_distance">
+        <item>Kilometer</item>
+        <item>Mile</item>
+        <item>Naut. mile</item>
+    </string-array>
+    <string-array name="unit_distance_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="unit_speed">
+        <item>km/h</item>
+        <item>mph</item>
+        <item>knots</item>
+    </string-array>
+    <string-array name="unit_speed_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="unit_vario">
+        <item>m/s</item>
+        <item>fpm</item>
+        <item>knots</item>
+    </string-array>
+    <string-array name="unit_vario_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="vario_interval_entries">
+        <item>Auto</item>
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>4 sec</item>
+        <item>8 sec</item>
+        <item>12 sec</item>
+        <item>16 sec</item>
+    </string-array>
+    <string-array name="vario_interval_values">
+        <item>0</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>4000</item>
+        <item>8000</item>
+        <item>12000</item>
+        <item>16000</item>
+    </string-array>
+    <string-array name="vario_volumes_entries">
+        <item>@string/ar_vario_volume_loud</item>
+        <item>@string/ar_vario_volume_medium</item>
+        <item>@string/ar_vario_volume_off</item>
+    </string-array>
+    <string-array name="vario_volumes_values">
+        <item>100</item>
+        <item>50</item>
+        <item>0</item>
+    </string-array>
+</resources>

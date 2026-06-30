@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/menu_livetrack">
+        <CheckBoxPreference android:title="@string/enable_livetrack" android:key="enable_livetrack" android:summary="@string/enable_livetrack_desc" android:defaultValue="false" />
+        <ListPreference android:entries="@array/livetrack_server_entries" android:title="@string/server" android:key="livetrack_server" android:defaultValue="0" android:entryValues="@array/livetrack_server_values" />
+        <EditTextPreference android:title="@string/username" android:key="user.username" />
+        <EditTextPreference android:title="@string/password" android:key="user.password" android:inputType="textPassword" />
+        <ListPreference android:entries="@array/livetrack_entries" android:title="@string/livetrack_time_interval" android:key="livetrack_time_interval" android:summary="@string/livetrack_time_interval_desc" android:defaultValue="60000" android:entryValues="@array/livetrack_values" />
+        <Preference android:title="@string/create_account" android:key="create_account" android:summary="@string/create_account_desc" />
+        <Preference android:title="@string/test" android:key="test_livetrack" android:summary="@string/test_livetrack_desc" />
+    </PreferenceCategory>
+</PreferenceScreen>

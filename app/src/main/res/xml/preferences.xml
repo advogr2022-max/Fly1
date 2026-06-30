@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <configs.prefitems.IconPreference android:title="@string/start_demo" android:key="demo_flight" android:summary="@string/start_demo_desc" android:order="1" />
+    <configs.prefitems.IconPreference android:title="@string/menu_data_sources" android:key="data_sources" android:summary="@string/menu_data_sources_desc" android:order="2" />
+    <configs.prefitems.IconPreference android:title="@string/menu_display" android:key="display" android:summary="@string/menu_display_desc" android:order="3" />
+    <configs.prefitems.IconPreference android:title="@string/menu_power" android:key="power_options" android:summary="@string/menu_power_desc" android:order="4" />
+    <configs.prefitems.IconPreference android:title="@string/menu_tasks" android:key="tasks" android:summary="@string/menu_tasks_desc" android:order="5" />
+    <configs.prefitems.IconPreference android:title="@string/menu_livetrack" android:key="livetrack_options" android:summary="@string/menu_livetrack_desc" android:order="6" />
+    <configs.prefitems.IconPreference android:title="@string/menu_advanced" android:key="advanced" android:summary="@string/menu_advanced_desc" android:order="7" />
+    <configs.prefitems.IconPreference android:title="@string/menu_about" android:key="about" android:summary="@string/menu_about_desc" android:order="8" />
+</PreferenceScreen>

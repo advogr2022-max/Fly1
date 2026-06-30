@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="@color/text" android:id="@id/uplIgcName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/upl_layout_short" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <Button android:id="@id/dialogButtonChange" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/change_data" android:onClick="clickChangeData" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/upl_txt_server" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/server" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/upl_txt_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/username" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/upl_txt_gmodel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gmodel" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/upl_layout_long" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upload_to_server" />
+            <Spinner android:entries="@array/server_entries" android:id="@id/server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/server" android:entryValues="@array/server_values" />
+            <Spinner android:entries="@array/leonardo_server_entries" android:id="@id/leonardo_server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/server" android:entryValues="@array/leonardo_server_values" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/username" android:layout_weight="5.0" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/password" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/username" android:nextFocusDown="@id/password" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" android:inputType="text" />
+                <EditText android:id="@id/password" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" android:inputType="textPassword" />
+            </LinearLayout>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/glider" />
+            <Spinner android:entries="@array/gtypes_entries" android:id="@id/glidertype" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/gtype" android:entryValues="@array/gtypes_values" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/gmodel" />
+            <EditText android:id="@id/glider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/comment" />
+        <EditText android:id="@id/upl_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text" />
+        <CheckBox android:id="@id/upl_private" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/private_flight" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/dialogButtonOK" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ok" android:layout_weight="5.0" android:onClick="clickOk" />
+            <Button android:id="@id/dialogButtonCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="5.0" android:onClick="clickCancel" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,27 @@
+australia-au.txt|Australia 2013
+austria-at.txt|Austria 2002
+belgium-w-be.txt|Belgium Weekends 2014
+croatia-hr.txt|Croatia
+czech-cz.txt|Czech Republic 2014
+denmark-dk.txt|Denmark 2014
+finland-fi.txt|Finland 2014
+france-fr.txt|France 2015
+germany-de.txt|Germany 2014
+hungary-hu.txt|Hungary 2012
+ireland-ei.txt|Ireland 2014
+italy-switz.txt|N Italy & S Switzerland 2014
+latvia-lv.txt|Latvia 2014
+lithuania-lt.txt|Lithuania 2012
+macedonia-mk.txt|Macedonia 2014
+netherlands-nl.txt|Netherlands 2014
+nor-sve-2015.txt|Norway & Sweden 2015
+norway-no.txt|Norway 2014
+poland-pl.txt|Poland 2015
+portugal-pt.txt|Portugal 2001
+slovenia-si.txt|Slovenia 2009
+slovakia-sk.txt|Slovakia 2012
+spain-es.txt|Spain 2014
+sweden-se.txt|Sweden 2014
+switzerland-ch.txt|Switzerland 2014
+united-kingdom-uk.txt|United Kingdom 2015
+xcglobe.txt|xcglobe forbiden airspace

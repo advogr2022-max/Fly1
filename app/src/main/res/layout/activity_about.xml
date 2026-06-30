@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="@color/text" android:background="@color/backgray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/menu_about" />
+        <TextView android:textColor="@android:color/tertiary_text_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/version" />
+        <TextView android:id="@id/ab_version" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <Button android:id="@id/ab_but_upgrade" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/upgrade_version" android:onClick="clickUpgrade" />
+        <LinearLayout android:background="#ff888888" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textColor="@android:color/tertiary_text_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/actkey" />
+        <TextView android:id="@id/ab_actkey" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:background="#ff888888" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ab_layout_licence" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/ab_licence" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@id/ab_buy_licence" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/buy_licence" android:onClick="clickBuyLicence" />
+            <Button android:id="@id/ab_enter_licence" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/enter_licence" android:onClick="clickEnterLicence" />
+            <LinearLayout android:background="#ff888888" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
