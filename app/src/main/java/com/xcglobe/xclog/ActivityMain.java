@@ -312,50 +312,62 @@ public class ActivityMain extends ActivityC0090a {
 
     @Override // com.xcglobe.xclog.ActivityC0090a, android.app.Activity
     public void onCreate(Bundle bundle) {
-        f433d = this;
-        App.m440a((String) null);
-        super.onCreate(bundle);
-        App.m438a(this);
-        this.f476S = true;
-        
-        // setContentView ДО App.m444b — иначе dialog.show() до setContentView даёт BadTokenException
-        App.m446c();
-        setContentView(com.xcglobe.flyme.R.layout.activity_main2);
-        this.f436a = (ViewVmp) findViewById(com.xcglobe.flyme.R.id.viewvmp);
-        
-        if (!m423h()) {
-            C0101l.m541a();
-            C0101l.f523H = ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED;
-            C0236d.f1344f = ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == PackageManager.PERMISSION_GRANTED;
-            if (!C0101l.f523H || !C0236d.f1344f) {
-                ArrayList arrayList = new ArrayList();
-                if (!C0101l.f523H) {
-                    arrayList.add("android.permission.WRITE_EXTERNAL_STORAGE");
-                    arrayList.add("android.permission.READ_EXTERNAL_STORAGE");
-                }
-                if (!C0236d.f1344f) {
-                    arrayList.add("android.permission.ACCESS_FINE_LOCATION");
-                    arrayList.add("android.permission.ACCESS_COARSE_LOCATION");
-                }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                    if (ContextCompat.checkSelfPermission(this, "android.permission.POST_NOTIFICATIONS")
-                            != PackageManager.PERMISSION_GRANTED) {
-                        arrayList.add("android.permission.POST_NOTIFICATIONS");
-                    }
-                }
-                ActivityCompat.requestPermissions(this, (String[]) arrayList.toArray(new String[0]), 123);
-            } else if (!C0095f.m480i().equals(C0099j.m515a("last_run_version"))) {
+        try {
+            f433d = this;
+            App.m440a((String) null);
+            super.onCreate(bundle);
+            App.m438a(this);
+            this.f476S = true;
+
+            // setContentView ДО App.m444b — иначе dialog.show() до setContentView даёт BadTokenException
+            App.m446c();
+            setContentView(com.xcglobe.flyme.R.layout.activity_main2);
+            this.f436a = (ViewVmp) findViewById(com.xcglobe.flyme.R.id.viewvmp);
+
+            if (!m423h()) {
                 C0101l.m541a();
-                m417c();
-                App.m448d();
+                C0101l.f523H = ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED;
+                C0236d.f1344f = ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == PackageManager.PERMISSION_GRANTED;
+                if (!C0101l.f523H || !C0236d.f1344f) {
+                    ArrayList arrayList = new ArrayList();
+                    if (!C0101l.f523H) {
+                        arrayList.add("android.permission.WRITE_EXTERNAL_STORAGE");
+                        arrayList.add("android.permission.READ_EXTERNAL_STORAGE");
+                    }
+                    if (!C0236d.f1344f) {
+                        arrayList.add("android.permission.ACCESS_FINE_LOCATION");
+                        arrayList.add("android.permission.ACCESS_COARSE_LOCATION");
+                    }
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                        if (ContextCompat.checkSelfPermission(this, "android.permission.POST_NOTIFICATIONS")
+                                != PackageManager.PERMISSION_GRANTED) {
+                            arrayList.add("android.permission.POST_NOTIFICATIONS");
+                        }
+                    }
+                    ActivityCompat.requestPermissions(this, (String[]) arrayList.toArray(new String[0]), 123);
+                } else if (!C0095f.m480i().equals(C0099j.m515a("last_run_version"))) {
+                    C0101l.m541a();
+                    m417c();
+                    App.m448d();
+                }
+                C0094e.m462a();
+                App.m444b(this);
+                f435f = true;
+                f432c = false;
+                f434e = false;
             }
-            C0094e.m462a();
-            App.m444b(this);
-            f435f = true;
-            f432c = false;
-            f434e = false;
+            m416b();
+        } catch (Throwable th) {
+            android.util.Log.e("FLYME_CRASH", "onCreate crash", th);
+            try {
+                java.io.File crashFile = new java.io.File(getFilesDir(), "crash_log.txt");
+                java.io.FileWriter fw = new java.io.FileWriter(crashFile, true);
+                fw.write("=== CRASH " + new java.util.Date().toString() + " ===\n");
+                fw.write(android.util.Log.getStackTraceString(th) + "\n\n");
+                fw.close();
+            } catch (Exception ignored) { }
+            throw th;
         }
-        m416b();
     }
 
     @Override // android.app.Activity
