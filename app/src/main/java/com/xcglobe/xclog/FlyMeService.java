@@ -105,7 +105,13 @@ public class FlyMeService extends Service {
         String action = intent != null ? intent.getAction() : null;
         if ("com.xcglobe.action.startservice".equals(action)) {
             // startForeground НЕМЕДЛЕННО — Android 8+ требует в течение 5 секунд после startForegroundService()
-            startForeground(101, m458b());
+            try {
+                startForeground(101, m458b());
+            } catch (Exception e) {
+                e.printStackTrace();
+                stopSelf();
+                return START_NOT_STICKY;
+            }
             if (this.f471g == null) {
                 this.f471g = new Handler();
             }
@@ -113,7 +119,11 @@ public class FlyMeService extends Service {
             if (this.f471g != null) {
                 this.f471g.removeCallbacks(this.f472h);
             }
-            stopForeground(STOP_FOREGROUND_REMOVE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                stopForeground(STOP_FOREGROUND_REMOVE);
+            } else {
+                stopForeground(true);
+            }
             stopSelf();
         }
         // Если intent == null (перезапуск системой) — оставляем service в foreground
