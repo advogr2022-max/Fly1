@@ -124,8 +124,8 @@ public class App extends Application {
             C0101l.f576az = C0101l.f574ax;
             C0101l.f543aA = false;
         }
-        C0096g.m496a();
         m446c();
+        C0096g.m496a();
     }
 
     /* renamed from: a */

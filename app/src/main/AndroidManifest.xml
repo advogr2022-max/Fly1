@@ -18,7 +18,7 @@
     <uses-feature android:name="android.hardware.sensor.barometer" android:required="false"/>
     <uses-feature android:name="android.hardware.location.gps" android:required="true"/>
     <application android:requestLegacyExternalStorage="true" android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.xcglobe.xclog.App" android:theme="@style/AppThemeBlack">
-        <provider android:authorities="com.xcglobe.flyme.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+        <provider android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
         <!-- Отключаем AndroidX startup-инициализаторы, чтобы избежать ANR на Android 14 -->
@@ -26,36 +26,37 @@
             <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" tools:node="remove" />
             <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" tools:node="remove" />
         </provider>
-        <activity android:label="@string/title_activity_main" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityMain" android:exported="true">
+        <activity android:label="@string/title_activity_main" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityMain" android:exported="true" android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityFlights"/>
-        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityInfo"/>
-        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityPocket"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityUpload" android:windowSoftInputMode="stateHidden"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityUploadEmail" android:windowSoftInputMode="stateHidden"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityAbout"/>
-        <activity android:label="@string/app_name" android:name="com.xcglobe.xclog.ActivityMap"/>
-        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityDataList"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfig"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigDisplay"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigAdvanced"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigDataSources"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigPower"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigGlider"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigIgc"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigLivetrack"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigUser"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigTasks"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigTask"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigUnits"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigVario"/>
-        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigOpenair"/>
-        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityCloudPicker"/>
+        <!-- FIX: Добавлен android:exported для всех activity (targetSdk 34 требует явного указания) -->
+        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityFlights" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityInfo" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityPocket" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityUpload" android:windowSoftInputMode="stateHidden" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityUploadEmail" android:windowSoftInputMode="stateHidden" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityAbout" android:exported="false"/>
+        <activity android:label="@string/app_name" android:name="com.xcglobe.xclog.ActivityMap" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityDataList" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityCloudPicker" android:exported="false"/>
+        <!-- configs activities — оставлены как FQN configs.ActivityConfig (исходный код в package configs;) -->
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfig" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigDisplay" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigAdvanced" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigDataSources" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigPower" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigGlider" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigIgc" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigLivetrack" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigUser" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigTasks" android:exported="false"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="configs.ActivityConfigTask" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigUnits" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigVario" android:exported="false"/>
+        <activity android:launchMode="singleTask" android:name="configs.ActivityConfigOpenair" android:exported="false"/>
         <service android:label="FlyMe Service" android:name="com.xcglobe.xclog.FlyMeService" android:exported="false" android:foregroundServiceType="location"/>
-        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
     </application>
 </manifest>
