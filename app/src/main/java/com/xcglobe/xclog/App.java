@@ -377,13 +377,42 @@ public class App extends Application {
 
     @Override // android.app.Application
     public final void onCreate() {
-        super.onCreate();
-        f461b = 0;
-        f460a = this;
-        f464e.clear();
-        PreferenceManager.setDefaultValues(this, R.xml.preferences_advanced, false);
-        C0099j.f512a = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        C0101l.m570g("App create");
-        C0239g.m1061a();
+        try {
+            // Сразу ставим глобальный обработчик — до любого app-кода
+            Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+                private final Thread.UncaughtExceptionHandler defaultHandler = Thread.getDefaultUncaughtExceptionHandler();
+                @Override
+                public void uncaughtException(Thread thread, Throwable th) {
+                    try {
+                        android.util.Log.e("FLYME_FATAL", "Uncaught in " + thread, th);
+                        java.io.File crashFile = new java.io.File(getCacheDir(), "crash_log.txt");
+                        java.io.FileWriter fw = new java.io.FileWriter(crashFile, true);
+                        fw.write("=== FATAL " + new java.util.Date().toString() + " [" + thread.getName() + "] ===\n");
+                        fw.write(android.util.Log.getStackTraceString(th) + "\n\n");
+                        fw.close();
+                    } catch (Exception ignored) { }
+                    if (defaultHandler != null) defaultHandler.uncaughtException(thread, th);
+                }
+            });
+
+            super.onCreate();
+            f461b = 0;
+            f460a = this;
+            f464e.clear();
+            PreferenceManager.setDefaultValues(this, R.xml.preferences_advanced, false);
+            C0099j.f512a = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            C0101l.m570g("App create");
+            C0239g.m1061a();
+        } catch (Throwable th) {
+            android.util.Log.e("FLYME_CRASH", "App.onCreate crash", th);
+            try {
+                java.io.File crashFile = new java.io.File(getCacheDir(), "crash_log.txt");
+                java.io.FileWriter fw = new java.io.FileWriter(crashFile, true);
+                fw.write("=== APP CRASH " + new java.util.Date().toString() + " ===\n");
+                fw.write(android.util.Log.getStackTraceString(th) + "\n\n");
+                fw.close();
+            } catch (Exception ignored) { }
+            throw th;
+        }
     }
 }
