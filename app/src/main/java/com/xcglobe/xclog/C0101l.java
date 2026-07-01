@@ -560,6 +560,8 @@ public class C0101l {
                                 int read = fileInputStream.read(bArr);
                                 if (read > 0) {
                                     outputStream.write(bArr, 0, read);
+                                } else {
+                                    break;
                                 }
                             }
                             fileInputStream.close();
@@ -602,6 +604,7 @@ public class C0101l {
         } catch (Exception unused2) {
             return null;
         }
+        return null;
     }
 
     /* renamed from: a */
@@ -630,17 +633,11 @@ public class C0101l {
                 }
             }
             str2 = stringBuffer.toString();
-        } catch (IOException e2) {
+            } catch (IOException e2) {
             e = e2;
             str2 = null;
-        }
-        try {
-        } catch (IOException e3) {
-            e = e3;
-            e.printStackTrace();
+            }
             return str2;
-        }
-        return str2;
     }
 
     /* renamed from: a */
@@ -736,7 +733,7 @@ public class C0101l {
                         }
                     }
                 }
-            } catch (IOException e2) {
+            } catch (Exception e2) {
                 e2.printStackTrace();
             }
         }
@@ -754,7 +751,7 @@ public class C0101l {
     }
 
     /* renamed from: a */
-    public static void m550a(String[] strArr, String str) {
+    public static void m550a(String[] strArr, String str) throws IOException {
         ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(str)));
         try {
             byte[] bArr = new byte[10000];
@@ -766,6 +763,8 @@ public class C0101l {
                         int read = bufferedInputStream.read(bArr, 0, 10000);
                         if (read != -1) {
                             zipOutputStream.write(bArr, 0, read);
+                        } else {
+                            break;
                         }
                     }
                     bufferedInputStream.close();
@@ -993,7 +992,7 @@ public class C0101l {
         try {
             m564d(str2, m562d + "/igc/" + str);
             return true;
-        } catch (IOException unused) {
+        } catch (Exception unused) {
             return false;
         }
     }

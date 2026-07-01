@@ -116,13 +116,13 @@ public class C0385d {
 
     /* renamed from: a */
     private void m1368a(String str, AbstractC0386e abstractC0386e, C0385d c0385d) {
-        C0390i c0390i;
-        int m1373b;
-        int[] iArr;
-        int[] iArr2;
-        int i2;
-        int i3;
-        AbstractC0386e abstractC0386e2;
+        C0390i c0390i = null;
+        int m1373b = 0;
+        int[] iArr = null;
+        int[] iArr2 = null;
+        int i2 = 0;
+        int i3 = 0;
+        AbstractC0386e abstractC0386e2 = null;
         ArrayList<String> m1271a = C0375o.m1271a(this.f2168a);
         AbstractC0386e mo1381a = abstractC0386e.mo1381a();
         mo1381a.mo1382a(this.f2170c, this.f2171d, this.f2168a);
@@ -165,7 +165,7 @@ public class C0385d {
                         c0390i2 = c0390i;
                     }
                 }
-            } catch (IOException unused) {
+            } catch (Exception unused) {
             }
         }
         int[] mo1391c = mo1381a.mo1391c();
@@ -459,7 +459,7 @@ public class C0385d {
     */
     void m1379a(C0385d c0385d) {
         short s;
-        int i2;
+        int i2 = 0;
         if (this.f2169b == null) {
             this.f2169b = new short[this.f2170c * this.f2171d];
         }

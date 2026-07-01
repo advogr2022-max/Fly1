@@ -329,7 +329,7 @@ public class ActivityConfigTasks extends C0166a {
 
     @Override // android.preference.PreferenceActivity, android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        int i2;
+        int i2 = 0;
         int itemId = menuItem.getItemId();
         if (itemId != 40) {
             if (itemId != 50) {

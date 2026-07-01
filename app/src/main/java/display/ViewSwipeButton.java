@@ -221,7 +221,7 @@ public class ViewSwipeButton extends View {
     }
 
     public void centerSelected(Item item) {
-        int i2;
+        int i2 = 0;
         if (this.itemsWidth < this.width) {
             this.scrollOffset = ((-(this.width - this.itemsWidth)) / 2) - (this.ITEM_MARGIN_X / 2);
         } else {

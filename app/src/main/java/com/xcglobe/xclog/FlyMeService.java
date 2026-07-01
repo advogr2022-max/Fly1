@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import androidx.core.app.NotificationCompat;
 // import android.support.v4.obf_v4_a.C0013e;
 import com.xcglobe.flyme.R;
 import flyme_tasks.AsyncTaskC0060a;
@@ -74,7 +75,7 @@ public class FlyMeService extends Service {
             return new Notification.Builder(this, "my_channel_01").setContentTitle(m456a).setSmallIcon(R.drawable.notification_color).setContentIntent(activity).build();
         }
         // C0013e.b bVar = new C0013e.b(this);
-        android.support.v4.app.NotificationCompat.Builder bVar = new android.support.v4.app.NotificationCompat.Builder(this);
+        NotificationCompat.Builder bVar = new NotificationCompat.Builder(this);
         // bVar.m53a(true);
         bVar.setContentTitle(getString(R.string.app_name)).setContentText(m456a).setContentIntent(activity).setSmallIcon(R.drawable.notification_mono);
         return bVar.build();

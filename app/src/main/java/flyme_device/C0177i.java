@@ -79,7 +79,7 @@ public class C0177i extends AbstractC0174f {
 
         @Override // java.lang.Runnable
         public void run() {
-            String str;
+            String str = null;
             C0172d.m666a("starting looper..., state=" + C0177i.f815j);
             long j2 = this.f834b;
             if (C0177i.this.f826m) {

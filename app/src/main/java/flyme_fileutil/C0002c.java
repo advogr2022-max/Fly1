@@ -89,7 +89,7 @@ public class C0002c {
     }
 
     /* renamed from: i */
-    private void m8i(String str) {
+    private void m8i(String str) throws Exception {
         throw new Exception(str);
     }
 
@@ -104,7 +104,7 @@ public class C0002c {
     */
     public ArrayList<C0001b> m10a(String str) {
         BufferedReader bufferedReader;
-        int i2;
+        int i2 = 0;
         boolean startsWith;
         BufferedReader bufferedReader2 = null;
         try {
@@ -179,7 +179,7 @@ public class C0002c {
                 th = th2;
                 bufferedReader = bufferedReader2;
             }
-        } catch (IOException e4) {
+        } catch (Exception e4) {
             e = e4;
         }
         m9j("  " + i2 + " / " + this.f24b.size());
@@ -392,7 +392,7 @@ public class C0002c {
     void m17b(String str) {
         String[] split = str.split(",");
         if (split.length < 3) {
-            m8i("Error parsing arc " + str);
+            try { m8i("Error parsing arc " + str); } catch (Exception e) { }
         }
         float[] fArr = {0.0f, 0.0f};
         m13a(m23g(split[0].trim()), fArr);
@@ -470,7 +470,7 @@ public class C0002c {
 
     /* renamed from: e */
     void m21e(String str) {
-        int i2;
+        int i2 = 0;
         int i3 = 0;
         while (str.charAt(i3) == ' ') {
             i3++;

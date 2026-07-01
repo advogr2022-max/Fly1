@@ -132,7 +132,7 @@ public class C0097h {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public boolean m505a(float f2, GpsVal gpsVal, boolean z, boolean z2, boolean z3) {
-        boolean z4;
+        boolean z4 = false;
         int length = this.f498b.length;
         this.f502g.f1972a = gpsVal.f1972a;
         this.f502g.f1973b = gpsVal.f1973b;

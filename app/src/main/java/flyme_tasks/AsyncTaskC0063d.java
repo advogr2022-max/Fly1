@@ -93,6 +93,7 @@ public class AsyncTaskC0063d extends AsyncTask<Integer, String, String> {
                 file.mkdirs();
             }
         }
+        try {
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(str));
         byte[] bArr = new byte[4096];
         while (true) {
@@ -103,6 +104,7 @@ public class AsyncTaskC0063d extends AsyncTask<Integer, String, String> {
             }
             bufferedOutputStream.write(bArr, 0, read);
         }
+        } catch (IOException e) { }
     }
 
     /* renamed from: b */

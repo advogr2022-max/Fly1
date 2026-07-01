@@ -20,13 +20,8 @@ public class C0192a<E> {
         this.f948a = (E[]) new Object[i2];
         this.f949b = i2;
         for (int i3 = 0; i3 < i2; i3++) {
-            try {
                 // ((E[]) this.f948a)[i3] = ...;
-            } catch (IllegalAccessException e3) {
-                throw new RuntimeException(e3);
-            } catch (InstantiationException e4) {
-                throw new RuntimeException(e4);
-            }
+                this.f948a[i3] = null;
         }
     }
 

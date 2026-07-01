@@ -173,7 +173,7 @@ public class C0371k {
                         canvas.drawPath(path, paint);
                     }
                 }
-            } catch (IOException unused) {
+            } catch (Exception unused) {
             }
         }
         C0371k c0371k = new C0371k(i2, i3);

@@ -3,6 +3,7 @@ package flyme_writer;
 import android.annotation.SuppressLint;
 import com.xcglobe.xclog.C0101l;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,7 @@ public class C0231a {
     }
 
     /* renamed from: b */
-    private void m1020b(String str) {
+    private void m1020b(String str) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new StringReader(str));
         for (int i2 = 0; i2 < 4; i2++) {
             try {
@@ -83,7 +84,7 @@ public class C0231a {
     }
 
     /* renamed from: c */
-    private void m1021c(String str) {
+    private void m1021c(String str) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new StringReader(str));
         while (true) {
             try {
@@ -109,7 +110,7 @@ public class C0231a {
     }
 
     /* renamed from: d */
-    private void m1022d(String str) {
+    private void m1022d(String str) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new StringReader(str));
         while (true) {
             try {
@@ -153,7 +154,7 @@ public class C0231a {
     }
 
     /* renamed from: e */
-    private void m1023e(String str) {
+    private void m1023e(String str) throws IOException {
         C0378r c0378r = new C0378r(str, true);
         while (true) {
             String m1299b = c0378r.m1299b("wpt");
@@ -172,7 +173,7 @@ public class C0231a {
     }
 
     /* renamed from: f */
-    private void m1024f(String str) {
+    private void m1024f(String str) throws IOException {
         C0374n c0374n = new C0374n();
         BufferedReader bufferedReader = new BufferedReader(new StringReader(str));
         try {
@@ -204,6 +205,7 @@ public class C0231a {
 
     /* renamed from: a */
     public List<PoiPoint> m1026a(String str, int i2) {
+        try {
         switch (i2) {
             case 1:
                 m1024f(str);
@@ -223,6 +225,7 @@ public class C0231a {
             default:
                 throw new RuntimeException("Unsupported waypoints format: " + i2);
         }
+        } catch (IOException e) { }
         return this.f1319a;
     }
 }

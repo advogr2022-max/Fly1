@@ -7,11 +7,12 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-// import android.support.v4.obf_v4_a.C0009a;
-// import ...
-import android.support.v4.obf_v4_a.stub_C0009a;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -315,8 +316,8 @@ public class ActivityMain extends ActivityC0090a {
         this.f476S = true;
         if (!m423h()) {
             C0101l.m541a();
-            C0101l.f523H = stub_C0009a.m132b(this, "android.permission.WRITE_EXTERNAL_STORAGE") == 0 && stub_C0009a.m132b(this, "android.permission.READ_EXTERNAL_STORAGE") == 0;
-            C0236d.f1344f = stub_C0009a.m132b(this, "android.permission.ACCESS_FINE_LOCATION") == 0;
+            C0101l.f523H = ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED;
+            C0236d.f1344f = ContextCompat.checkSelfPermission(this, "android.permission.ACCESS_FINE_LOCATION") == PackageManager.PERMISSION_GRANTED;
             if (!C0101l.f523H || !C0236d.f1344f) {
                 ArrayList arrayList = new ArrayList();
                 if (!C0101l.f523H) {
@@ -327,7 +328,7 @@ public class ActivityMain extends ActivityC0090a {
                     arrayList.add("android.permission.ACCESS_FINE_LOCATION");
                     arrayList.add("android.permission.ACCESS_COARSE_LOCATION");
                 }
-                stub_C0009a.m28a(this, (String[]) arrayList.toArray(new String[0]), 123);
+                ActivityCompat.requestPermissions(this, (String[]) arrayList.toArray(new String[0]), 123);
             } else if (!C0095f.m480i().equals(C0099j.m515a("last_run_version"))) {
                 C0101l.m541a();
                 m417c();

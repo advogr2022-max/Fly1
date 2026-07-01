@@ -135,7 +135,7 @@ public class C0180l extends AbstractC0174f {
 
     /* renamed from: k */
     private UsbDevice m783k() {
-        String str;
+        String str = null;
         for (UsbDevice usbDevice : this.f891j.getDeviceList().values()) {
             int vendorId = usbDevice.getVendorId();
             int productId = usbDevice.getProductId();

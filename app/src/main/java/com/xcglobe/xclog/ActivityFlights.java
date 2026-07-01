@@ -56,7 +56,7 @@ public class ActivityFlights extends ListActivity {
 
     /* renamed from: a */
     void m406a(boolean z) {
-        int i2;
+        int i2 = 0;
         File[] listFiles = new File(C0101l.m558c()).listFiles();
         if (listFiles != null) {
             while (i2 < listFiles.length) {

@@ -196,7 +196,7 @@ public class C0181m extends AbstractC0174f {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: a */
     public synchronized void m789a(BluetoothGatt bluetoothGatt, int i2, int i3) {
-        String str;
+        String str = null;
         C0172d.m666a("GATTCBACK Connection state: " + i3);
         if (i3 == 2) {
             f899m = 2;

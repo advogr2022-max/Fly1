@@ -156,7 +156,7 @@ public class C0176h extends AbstractC0174f {
     */
     public BluetoothSocket m715b(BluetoothDevice bluetoothDevice) {
         BluetoothSocket bluetoothSocket;
-        BluetoothSocket bluetoothSocket2;
+        BluetoothSocket bluetoothSocket2 = null;
         if (this.f803f) {
             try {
                 bluetoothSocket = bluetoothDevice.createRfcommSocketToServiceRecord(f800c);

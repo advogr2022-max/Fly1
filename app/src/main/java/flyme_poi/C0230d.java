@@ -30,27 +30,17 @@ public class C0230d {
         }
         try {
             bufferedReader = new BufferedReader(new FileReader(str2));
-            try {
-            } catch (FileNotFoundException e2) {
-                e = e2;
-                e.printStackTrace();
-                if (bufferedReader != null) {
-                }
-                return c0227a;
-            } catch (IOException e3) {
-                e = e3;
-                e.printStackTrace();
-                if (bufferedReader != null) {
-                }
-                return c0227a;
-            }
         } catch (FileNotFoundException e4) {
             e = e4;
             bufferedReader = null;
+            return c0227a;
         } catch (IOException e5) {
             e = e5;
             bufferedReader = null;
+            return c0227a;
         }
+        if (bufferedReader == null) return c0227a;
+        try {
         if (bufferedReader.readLine() == null) {
             return null;
         }
@@ -145,6 +135,11 @@ public class C0230d {
             }
         }
         return c0227a;
+    } catch (IOException e6) {
+        e = e6;
+        e.printStackTrace();
+        return c0227a;
+    }
     }
 
     /* renamed from: a */

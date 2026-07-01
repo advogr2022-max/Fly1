@@ -213,7 +213,7 @@ public class C0211a {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public void m895a(float f2, float f3, float f4, long j2) {
-        int i2;
+        int i2 = 0;
         long j3 = j2 - this.f1123r;
         if (j3 < 1000) {
             return;

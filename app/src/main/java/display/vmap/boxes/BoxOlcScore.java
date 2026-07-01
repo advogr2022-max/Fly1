@@ -36,7 +36,7 @@ public class BoxOlcScore extends InfoBox {
 
     private void updateContent() {
         int m530g;
-        int m1278a;
+        int m1278a = 0;
         if (BIG_PIC_MIN_REC_HEIGHT == 0) {
             calcpicMinRecHeight();
         }

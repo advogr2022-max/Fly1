@@ -60,7 +60,7 @@ public class C0218a {
         String str;
         try {
             str = m934a(bArr, 0, bArr.length, 0);
-        } catch (IOException e2) {
+        } catch (Exception e2) {
             if (!f1207a) {
                 throw new AssertionError(e2.getMessage());
             }
@@ -88,12 +88,12 @@ public class C0218a {
     }
 
     /* renamed from: a */
-    public static byte[] m936a(String str) {
+    public static byte[] m936a(String str) throws IOException {
         return m937a(str, 0);
     }
 
     /* renamed from: a */
-    public static byte[] m937a(String str, int i2) {
+    public static byte[] m937a(String str, int i2) throws IOException {
         byte[] bytes;
         if (str == null) {
             throw new NullPointerException("Input string was null.");
@@ -192,7 +192,7 @@ public class C0218a {
     }
 
     /* renamed from: c */
-    public static byte[] m941c(byte[] bArr, int i2, int i3, int i4) {
+    public static byte[] m941c(byte[] bArr, int i2, int i3, int i4) throws IOException {
         int i5;
         if (bArr == null) {
             throw new NullPointerException("Cannot decode null source array.");

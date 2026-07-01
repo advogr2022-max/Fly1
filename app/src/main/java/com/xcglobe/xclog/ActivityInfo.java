@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -282,7 +282,7 @@ public class ActivityInfo extends ActivityC0090a {
         try {
             C0101l.m564d(str, m562d + "/igc/" + this.f428l);
             C0101l.m561c(App.m435a(R.string.exported_to) + "/xcglobe/igc/" + this.f428l, true);
-        } catch (IOException unused) {
+        } catch (Exception unused) {
             C0101l.m561c(App.m435a(R.string.cant_access_external_files), true);
         }
     }

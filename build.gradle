@@ -1,7 +1,8 @@
 // Top-level build file. Plugins are declared here so subprojects can apply them.
 buildscript {
     repositories {
-        maven { url 'file:///home/user/.gradle/local-maven-repo' }
+        google()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.2.0'
@@ -10,7 +11,8 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url 'file:///home/user/.gradle/local-maven-repo' }
+        google()
+        mavenCentral()
     }
 }
 

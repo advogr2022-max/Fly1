@@ -54,7 +54,7 @@ public class C0092c extends ArrayAdapter<String> {
         a aVar;
         TextView textView;
         int i3;
-        String str;
+        String str = null;
         if (view == null) {
             view = ((Activity) this.f480a).getLayoutInflater().inflate(this.f481b, viewGroup, false);
             aVar = new a();

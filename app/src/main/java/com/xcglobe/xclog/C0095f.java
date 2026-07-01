@@ -7,6 +7,7 @@ import android.provider.Settings;
 import com.xcglobe.flyme.R;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class C0095f {
     }
 
     /* renamed from: a */
-    private static String m464a(File file) {
+    private static String m464a(File file) throws IOException {
         RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
         byte[] bArr = new byte[(int) randomAccessFile.length()];
         randomAccessFile.readFully(bArr);
@@ -113,7 +114,7 @@ public class C0095f {
     }
 
     /* renamed from: b */
-    private static void m470b(File file) {
+    private static void m470b(File file) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         fileOutputStream.write(UUID.randomUUID().toString().getBytes());
         fileOutputStream.close();
@@ -170,7 +171,7 @@ public class C0095f {
     */
     public static void m474c() {
         long j2;
-        File file;
+        File file = null;
         if (C0099j.m515a("install_first_run_time").length() < 3) {
             try {
                 file = new File(C0101l.m537a(""));

@@ -80,7 +80,7 @@ public class C0072a {
     /* renamed from: c */
     public void m383c() {
         long j2;
-        long j3;
+        long j3 = 0;
         C0220c c0220c = new C0220c(C0101l.m558c() + "/" + this.f332e);
         boolean equals = this.f332e.equals("demo-task.igc");
         long currentTimeMillis = System.currentTimeMillis();
@@ -124,7 +124,7 @@ public class C0072a {
                 if (z && (C0227a.f1276a == null || C0227a.f1276a.f1295s)) {
                     z = false;
                 }
-                Thread.sleep(j2);
+                try { Thread.sleep(j2); } catch (InterruptedException e) {}
                 i2 = i3;
                 j5 = j7;
                 j4 = 0;
@@ -133,7 +133,7 @@ public class C0072a {
             if (z) {
                 z = false;
             }
-            Thread.sleep(j2);
+            try { Thread.sleep(j2); } catch (InterruptedException e2) {}
             i2 = i3;
             j5 = j7;
             j4 = 0;

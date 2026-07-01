@@ -47,7 +47,7 @@ public class C0184p {
                     e2.printStackTrace();
                 }
                 if (this.f932b == null) {
-                    Thread.sleep(5000L);
+                    try { Thread.sleep(5000L); } catch (InterruptedException e3) { }
                     if (this.f932b == null) {
                         C0184p.m816c();
                     }
@@ -55,7 +55,7 @@ public class C0184p {
                     if (this.f932b.f885d == 3) {
                         int bulkTransfer = this.f932b.f887f.bulkTransfer(this.f932b.f886e, this.f931a, this.f931a.length, 5000);
                         if (bulkTransfer > 0) {
-                            this.f932b.m786b(new String(this.f931a, 0, bulkTransfer, "UTF-8"));
+                            try { this.f932b.m786b(new String(this.f931a, 0, bulkTransfer, "UTF-8")); } catch (Exception e4) { }
                             C0184p.f929c = true;
                         } else {
                             C0172d.m666a("bulkTransfer failed");
@@ -63,7 +63,7 @@ public class C0184p {
                         }
                     } else if (this.f932b.f885d == 0) {
                         C0172d.m666a("state=disconnected");
-                        Thread.sleep(5000L);
+                        try { Thread.sleep(5000L); } catch (InterruptedException e5) { }
                         C0184p.m816c();
                     } else {
                         C0172d.m666a("state=terminated");

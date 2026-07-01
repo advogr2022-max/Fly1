@@ -107,6 +107,7 @@ public class C0389h {
         }
         if (i5 != 2) {
         }
+        return 1;
     }
 
     /* renamed from: a */
@@ -127,11 +128,11 @@ public class C0389h {
                         if (c0390i.f2220f > 0) {
                             abstractC0386e.mo1387a(c0390i.f2215a, c0390i.f2216b, c0390i.f2220f, c0390i.f2218d, ((C0392e) abstractC0386e).f2244a.m1395a(c0390i.f2218d));
                         }
-                    } catch (IOException e2) {
+                    } catch (Exception e2) {
                         C0101l.m547a("crash", Log.getStackTraceString(e2));
                     }
                 }
-            } catch (IOException unused) {
+            } catch (Exception unused) {
             }
         }
     }
@@ -167,7 +168,7 @@ public class C0389h {
                 C0099j.m517a("mapset", z3 ? 2 : 0);
                 AsyncTaskC0063d.m321c();
             }
-        } catch (IOException e2) {
+        } catch (Exception e2) {
             C0101l.m547a("crash", Log.getStackTraceString(e2));
         }
     }

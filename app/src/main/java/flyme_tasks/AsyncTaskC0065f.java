@@ -86,10 +86,10 @@ public class AsyncTaskC0065f extends AsyncTask<Void, Void, Void> {
         try {
             this.f300j = m336a();
             return null;
-        } catch (IOException e2) {
+        } catch (Exception e2) {
             e2.printStackTrace();
             return null;
-        } catch (Exception e3) {
+        } catch (Throwable e3) {
             e3.printStackTrace();
             return null;
         }
@@ -140,7 +140,7 @@ public class AsyncTaskC0065f extends AsyncTask<Void, Void, Void> {
         String m537a = C0101l.m537a("temp");
         new File(m537a).mkdirs();
         String str2 = m537a + "/" + this.f296f + ".zip";
-        C0101l.m550a(new String[]{str}, str2);
+        try { C0101l.m550a(new String[]{str}, str2); } catch (IOException e) { }
         return str2;
     }
 }

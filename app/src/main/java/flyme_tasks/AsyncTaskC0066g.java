@@ -84,7 +84,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
                             arrayList.add(poiPoint);
                         }
                     }
-                } catch (IOException unused) {
+                } catch (Exception unused) {
                 }
             }
         }
@@ -101,7 +101,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
     }
 
     /* renamed from: a */
-    private static void m342a(BufferedReader bufferedReader, C0367g c0367g, List<PoiPoint> list) {
+    private static void m342a(BufferedReader bufferedReader, C0367g c0367g, List<PoiPoint> list) throws IOException {
         C0374n c0374n = new C0374n();
         while (true) {
             String readLine = bufferedReader.readLine();
@@ -124,7 +124,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
     }
 
     /* renamed from: a */
-    private static void m343a(BufferedReader bufferedReader, C0367g c0367g, List<PoiPoint> list, HashSet<Long> hashSet, char c2) {
+    private static void m343a(BufferedReader bufferedReader, C0367g c0367g, List<PoiPoint> list, HashSet<Long> hashSet, char c2) throws IOException {
         int length;
         int length2;
         int m532a;
@@ -169,11 +169,11 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
     */
     public static void m344a(String str, float f2, float f3) {
         BufferedReader bufferedReader;
-        FileReader fileReader;
-        int i2;
-        int i3;
-        StringBuilder sb;
-        String readLine;
+        FileReader fileReader = null;
+        int i2 = 0;
+        int i3 = 0;
+        StringBuilder sb = null;
+        String readLine = null;
         String m537a = C0101l.m537a("poi/waypoints.cup");
         if (m537a == null) {
             return;
@@ -186,24 +186,17 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
             try {
                 sb = new StringBuilder();
                 readLine = bufferedReader.readLine();
-            } catch (FileNotFoundException e2) {
-                Throwable e = e2;
-                e.printStackTrace();
-                if (bufferedReader != null) {
-                }
-            } catch (IOException e3) {
-                Throwable e = e3;
-                e.printStackTrace();
-                if (bufferedReader != null) {
-                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         } catch (FileNotFoundException e4) {
             Throwable e = e4;
             bufferedReader = null;
-        } catch (IOException e5) {
+        } catch (Exception e5) {
             Throwable e = e5;
             bufferedReader = null;
         }
+        if (sb == null) sb = new StringBuilder();
         if (readLine == null) {
             return;
         }
@@ -211,7 +204,8 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
         sb.append("\n");
         C0374n c0374n = new C0374n();
         while (true) {
-            String readLine2 = bufferedReader.readLine();
+            String readLine2 = null;
+            try { readLine2 = bufferedReader.readLine(); } catch (IOException e) { }
             if (readLine2 == null) {
                 break;
             }
@@ -223,12 +217,12 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
             } catch (Exception unused) {
             }
         }
-        fileReader.close();
+        try { fileReader.close(); } catch (IOException e) { }
         String str2 = m537a + ".new";
-        PrintStream printStream = new PrintStream(new FileOutputStream(str2));
+        try { PrintStream printStream = new PrintStream(new FileOutputStream(str2));
         printStream.print(sb.toString());
         printStream.flush();
-        printStream.close();
+        printStream.close(); } catch (Exception e) { }
         File file = new File(str2);
         m350a(file, new File(m537a));
         file.delete();
@@ -247,7 +241,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
             bufferedReader = new BufferedReader(new FileReader(C0101l.m537a(str)));
             try {
                 m342a(bufferedReader, c0367g, list);
-            } catch (IOException unused) {
+            } catch (Exception unused) {
             }
         } catch (IOException unused2) {
             bufferedReader = null;
@@ -268,7 +262,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
     */
     private static void m346a(String str, C0367g c0367g, List<PoiPoint> list, char c2) {
         BufferedReader bufferedReader;
-        FileReader fileReader;
+        FileReader fileReader = null;
         String m537a = C0101l.m537a("poi/" + str);
         if (!new File(m537a).isFile()) {
             if (!str.equals("waypoints.cup")) {
@@ -295,7 +289,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
             e.printStackTrace();
             if (bufferedReader != null) {
             }
-        } catch (IOException e5) {
+        } catch (Exception e5) {
             Throwable e = e5;
             e.printStackTrace();
             if (bufferedReader != null) {
@@ -304,7 +298,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
         if (bufferedReader != null) {
             try {
                 bufferedReader.close();
-            } catch (IOException unused) {
+            } catch (Exception unused) {
             }
         }
     }
@@ -455,6 +449,7 @@ public class AsyncTaskC0066g extends AsyncTask<GpsVal, Void, Integer> {
             fileInputStream = null;
             fileChannel = null;
         }
+        return false;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

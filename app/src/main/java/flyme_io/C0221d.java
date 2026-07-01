@@ -357,7 +357,7 @@ public class C0221d {
             String m933a = C0218a.m933a(signature.sign());
             this.f1239g.write(("G" + m933a + "\n").getBytes());
         } catch (Exception e2) {
-            this.f1239g.write("LXFLCANTSIGN\n".getBytes());
+            try { this.f1239g.write("LXFLCANTSIGN\n".getBytes()); } catch (IOException e3) { }
             C0101l.m547a("grecord", e2.getMessage());
         }
     }

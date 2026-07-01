@@ -155,7 +155,7 @@ public class C0390i {
     }
 
     /* renamed from: a */
-    private int m1399a(DataInputStream dataInputStream) {
+    private int m1399a(DataInputStream dataInputStream) throws IOException {
         short readShort = dataInputStream.readShort();
         return readShort == -1 ? dataInputStream.readInt() : readShort < 0 ? readShort + 65536 : readShort;
     }
@@ -193,7 +193,7 @@ public class C0390i {
     }
 
     /* renamed from: c */
-    private boolean m1401c(int i2) {
+    private boolean m1401c(int i2) throws IOException {
         for (int i3 = 0; i3 < i2; i3++) {
             int m1399a = m1399a(this.f2210E);
             if (m1399a == 0) {
@@ -208,7 +208,7 @@ public class C0390i {
     }
 
     /* renamed from: d */
-    private void m1402d() {
+    private void m1402d() throws IOException {
         if (this.f2207B == null) {
             return;
         }
@@ -250,7 +250,7 @@ public class C0390i {
     }
 
     /* renamed from: e */
-    private void m1404e() {
+    private void m1404e() throws IOException {
         int i2 = this.f2223i != 0 ? this.f2223i : 100;
         this.f2214I[1] = i2 * 2;
         int i3 = i2 * 4;
@@ -297,7 +297,7 @@ public class C0390i {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void m1406a(int i2) {
+    public void m1406a(int i2) throws IOException {
         int i3;
         this.f2234u = 0;
         if (this.f2235v != 0 && i2 >= 300) {
@@ -350,7 +350,7 @@ public class C0390i {
     }
 
     /* renamed from: a */
-    public void m1408a(String str) {
+    public void m1408a(String str) throws IOException {
         this.f2223i = 100;
         this.f2211F = new FileInputStream(str);
         this.f2210E = new DataInputStream(new BufferedInputStream(this.f2211F, 80000));
@@ -387,7 +387,7 @@ public class C0390i {
     }
 
     /* renamed from: b */
-    public boolean m1410b() {
+    public boolean m1410b() throws IOException {
         int m1399a;
         while (!f2205r && (m1399a = m1399a(this.f2210E)) != 0) {
             this.f2224j++;
@@ -458,7 +458,7 @@ public class C0390i {
     }
 
     /* renamed from: c */
-    public int m1411c() {
+    public int m1411c() throws IOException {
         return this.f2234u;
     }
 }

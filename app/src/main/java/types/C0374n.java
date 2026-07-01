@@ -196,7 +196,7 @@ public class C0374n {
 
     /* renamed from: a */
     public boolean m1266a(String str) {
-        int m1259a;
+        int m1259a = 0;
         if (str.charAt(0) == '#') {
             char charAt = str.charAt(1);
             if (charAt == '+') {

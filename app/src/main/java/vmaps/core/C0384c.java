@@ -71,7 +71,7 @@ public class C0384c {
     */
     private int m1364c(double d2) {
         int i2;
-        int i3;
+        int i3 = 0;
         int i4 = this.f2165b;
         boolean z = true;
         boolean z2 = this.f2164a - 1 >= 0;
@@ -137,6 +137,7 @@ public class C0384c {
         this.f2165b = i4;
         if (this.f2164a - 2 >= i4) {
         }
+        return i4;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

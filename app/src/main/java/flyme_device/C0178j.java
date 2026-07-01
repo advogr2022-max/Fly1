@@ -136,8 +136,8 @@ public class C0178j extends AbstractC0174f {
         */
         public void run() {
             String str;
-            C0178j c0178j;
-            String str2;
+            C0178j c0178j = null;
+            String str2 = null;
             C0172d.m666a("starting looper...");
             if (C0178j.this.f876y) {
                 C0172d.m666a("terminating");

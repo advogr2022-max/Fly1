@@ -103,8 +103,8 @@ public class ActivityConfigAdvanced extends C0166a {
         this.f612a.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() { // from class: configs.ActivityConfigAdvanced.7
             @Override // android.preference.Preference.OnPreferenceChangeListener
             public boolean onPreferenceChange(Preference preference, Object obj) {
-                Context applicationContext;
-                String str;
+                Context applicationContext = null;
+                String str = null;
                 String obj2 = obj != null ? obj.toString() : "0";
                 if (obj2.length() == 0) {
                     obj2 = "0";

@@ -14,7 +14,7 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 import com.xcglobe.xclog.App;
 import com.xcglobe.xclog.C0101l;
 import java.io.BufferedInputStream;

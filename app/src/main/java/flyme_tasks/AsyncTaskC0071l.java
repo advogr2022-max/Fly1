@@ -88,9 +88,9 @@ public class AsyncTaskC0071l extends AsyncTask<Void, Void, Integer> {
     @Override // android.os.AsyncTask
     /* renamed from: a, reason: merged with bridge method [inline-methods] */
     public void onPostExecute(Integer num) {
-        String str;
-        String str2;
-        String m371a;
+        String str = null;
+        String str2 = null;
+        String m371a = null;
         f324d = false;
         if (this.f325a == null) {
             return;

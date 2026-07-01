@@ -876,8 +876,8 @@ public class C0216c {
         int i5;
         int i6;
         int i7;
-        int i8;
-        a aVar;
+        int i8 = 0;
+        a aVar = null;
         int i9;
         int i10;
         int i11;
