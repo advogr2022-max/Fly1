@@ -231,28 +231,47 @@ public class App extends Application {
     public static void m444b(Activity activity) {
         Thread.setDefaultUncaughtExceptionHandler(new C0093d());
         C0091b.m460a();
+        android.util.Log.e("FLYME_TIMING", "Starting C0239g.m1061a");
+        long t0 = System.currentTimeMillis();
         C0239g.m1061a();
+        android.util.Log.e("FLYME_TIMING", "C0239g.m1061a done in " + (System.currentTimeMillis()-t0) + "ms");
+        t0 = System.currentTimeMillis();
         C0236d.m1042a(activity);
+        android.util.Log.e("FLYME_TIMING", "C0236d.m1042a done in " + (System.currentTimeMillis()-t0) + "ms");
+        t0 = System.currentTimeMillis();
         C0236d.m1041a();
+        android.util.Log.e("FLYME_TIMING", "C0236d.m1041a done in " + (System.currentTimeMillis()-t0) + "ms");
+        t0 = System.currentTimeMillis();
         AsyncTaskC0066g.m348a(C0239g.m1073d());
+        android.util.Log.e("FLYME_TIMING", "AsyncTaskC0066g.m348a done in " + (System.currentTimeMillis()-t0) + "ms");
+        t0 = System.currentTimeMillis();
         C0391d.m1413a();
+        android.util.Log.e("FLYME_TIMING", "C0391d.m1413a done in " + (System.currentTimeMillis()-t0) + "ms");
         C0227a.m990e();
         String m480i = C0095f.m480i();
         String m515a = C0099j.m515a("last_run_version");
         m448d();
         if (!m480i.equals(m515a)) {
+            android.util.Log.e("FLYME_TIMING", "Copying files (version mismatch)");
+            t0 = System.currentTimeMillis();
             C0091b.m461a("external.cfg", "config", true);
             C0091b.m461a("demo-task.cup", "tasks", false);
             C0091b.m461a("leonardo-glider-brand.txt", "", false);
             String str = C0101l.m558c() + "/demo.igc";
             C0091b.m461a("demo.igc", "igc", true);
+            android.util.Log.e("FLYME_TIMING", "File copy done in " + (System.currentTimeMillis()-t0) + "ms");
         }
         C0099j.m527d("last_run_version", m480i);
         new File(C0101l.m537a("waypoints")).mkdirs();
         C0095f.m474c();
+        android.util.Log.e("FLYME_TIMING", "Starting AsyncTaskC0071l");
+        t0 = System.currentTimeMillis();
         AsyncTaskC0071l.m373b();
         AsyncTaskC0071l.m372a();
+        android.util.Log.e("FLYME_TIMING", "AsyncTaskC0071l done in " + (System.currentTimeMillis()-t0) + "ms");
+        t0 = System.currentTimeMillis();
         C0172d.m673g();
+        android.util.Log.e("FLYME_TIMING", "C0172d.m673g done in " + (System.currentTimeMillis()-t0) + "ms");
         if (C0101l.f525J) {
             try {
                 C0172d.m665a(activity.getApplicationContext(), C0099j.m521b("external_device_model"), C0099j.m515a("external_device_address"), C0239g.f1384O, activity);

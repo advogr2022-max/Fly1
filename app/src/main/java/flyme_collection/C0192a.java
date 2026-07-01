@@ -84,6 +84,15 @@ public class C0192a<E> {
         this.f950c = i2;
     }
 
+    /* renamed from: g */
+    public void m825g(E e2) {
+        int i2 = this.f950c + 1;
+        if (i2 >= this.f949b) {
+            i2 -= this.f949b;
+        }
+        this.f948a[i2] = e2;
+    }
+
     /* renamed from: e */
     public E m823e() {
         if (this.f950c >= 0) {

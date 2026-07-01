@@ -305,6 +305,10 @@ public class C0239g {
                 }
             }
             C0370j m821c = f1415h.m821c();
+            if (m821c == null) {
+                m821c = new C0370j();
+                f1415h.m825g(m821c);
+            }
             m821c.f1975d = j2;
             m821c.f1974c = s;
             m821c.f1972a = f2;

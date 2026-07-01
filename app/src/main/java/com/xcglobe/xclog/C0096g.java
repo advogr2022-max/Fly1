@@ -62,6 +62,10 @@ public class C0096g {
 
     /* renamed from: c */
     public static Paint m500c(float f2, int i2) {
+        if (f493a == null) {
+            f493a = new Paint();
+            f493a.setAntiAlias(true);
+        }
         f493a.setTextSize(f2);
         f493a.setColor(i2);
         return f493a;

@@ -275,9 +275,6 @@ public class ViewVmp extends View implements InterfaceC0388g {
         this.world = new VmpWorld(true);
         reqFlag = 0;
         thermalingMode = ENABLE_AUTO_CENTER_AFTER_ZOOM;
-        if (Build.VERSION.SDK_INT >= 11) {
-            setLayerType(1, null);
-        }
         float f2 = C0101l.f578c / 7.0f;
         paintOutline.set(C0096g.m501d());
         paintOutline.setColor(Color.parseColor("#f0fff0"));

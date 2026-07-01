@@ -323,6 +323,12 @@ public class ActivityMain extends ActivityC0090a {
             App.m446c();
             setContentView(com.xcglobe.flyme.R.layout.activity_main2);
             this.f436a = (ViewVmp) findViewById(com.xcglobe.flyme.R.id.viewvmp);
+            // Force fullscreen to fix LDPlayer surface issue
+            getWindow().addFlags(1024); // FLAG_FULLSCREEN
+            if (Build.VERSION.SDK_INT >= 19) {
+                getWindow().getDecorView().setSystemUiVisibility(
+                    2 | 4 | 256 | 512 | 4096); // SYSTEM_UI_FLAG_FULLSCREEN | LAYOUT_STABLE | LAYOUT_HIDE_NAVIGATION | LAYOUT_FULLSCREEN | IMMERSIVE_STICKY
+            }
 
             if (!m423h()) {
                 C0101l.m541a();

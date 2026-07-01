@@ -4,7 +4,12 @@
         <item name="android:windowBackground">@color/red</item>
         <item name="android:textColor">#ff00ff00</item>
     </style>
-    <style name="AppThemeBlack" parent="@android:style/Theme.Black.NoTitleBar" />
+    <style name="AppThemeBlack" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">#FF0D0D1A</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
     <style name="AppThemeWhite" parent="@android:style/Theme.Light.NoTitleBar" />
 </resources>
 

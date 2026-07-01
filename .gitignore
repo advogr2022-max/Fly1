@@ -10,3 +10,5 @@
 app/build/
 *.idsig
 *.apk
+*.idsig
+*.apk
