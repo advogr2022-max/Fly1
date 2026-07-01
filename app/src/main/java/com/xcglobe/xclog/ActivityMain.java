@@ -212,9 +212,12 @@ public class ActivityMain extends ActivityC0090a {
 
     /* renamed from: h */
     private boolean m423h() {
-        Iterator<ActivityManager.RunningServiceInfo> it = ((ActivityManager) getSystemService("activity")).getRunningServices(Integer.MAX_VALUE).iterator();
-        while (it.hasNext()) {
-            if (FlyMeService.class.getName().equals(it.next().service.getClassName())) {
+        ActivityManager am = (ActivityManager) getSystemService("activity");
+        if (am == null) return false;
+        java.util.List<ActivityManager.RunningServiceInfo> services = am.getRunningServices(Integer.MAX_VALUE);
+        if (services == null) return false;
+        for (ActivityManager.RunningServiceInfo info : services) {
+            if (FlyMeService.class.getName().equals(info.service.getClassName())) {
                 return true;
             }
         }
@@ -314,6 +317,12 @@ public class ActivityMain extends ActivityC0090a {
         super.onCreate(bundle);
         App.m438a(this);
         this.f476S = true;
+        
+        // setContentView ДО App.m444b — иначе dialog.show() до setContentView даёт BadTokenException
+        App.m446c();
+        setContentView(com.xcglobe.flyme.R.layout.activity_main2);
+        this.f436a = (ViewVmp) findViewById(com.xcglobe.flyme.R.id.viewvmp);
+        
         if (!m423h()) {
             C0101l.m541a();
             C0101l.f523H = ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == PackageManager.PERMISSION_GRANTED;
@@ -346,9 +355,6 @@ public class ActivityMain extends ActivityC0090a {
             f432c = false;
             f434e = false;
         }
-        App.m446c();
-        setContentView(com.xcglobe.flyme.R.layout.activity_main2);
-        this.f436a = (ViewVmp) findViewById(com.xcglobe.flyme.R.id.viewvmp);
         m416b();
     }
 
@@ -430,11 +436,11 @@ public class ActivityMain extends ActivityC0090a {
             return;
         }
         for (int i3 = 0; i3 < strArr.length; i3++) {
-            if (strArr[i3].equals("android.permission.ACCESS_FINE_LOCATION") && iArr[0] == 0) {
+            if (strArr[i3].equals("android.permission.ACCESS_FINE_LOCATION") && iArr[i3] == 0) {
                 C0236d.f1344f = true;
                 C0236d.m1047d();
             }
-            if (strArr[i3].equals("android.permission.WRITE_EXTERNAL_STORAGE") && iArr[0] == 0) {
+            if (strArr[i3].equals("android.permission.WRITE_EXTERNAL_STORAGE") && iArr[i3] == 0) {
                 C0101l.f523H = true;
                 C0101l.m541a();
                 m417c();

@@ -21,6 +21,11 @@
         <provider android:authorities="com.xcglobe.flyme.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
+        <!-- Отключаем AndroidX startup-инициализаторы, чтобы избежать ANR на Android 14 -->
+        <provider android:name="androidx.startup.InitializationProvider" android:authorities="${applicationId}.androidx-startup" android:exported="false" tools:node="merge">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" tools:node="remove" />
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" tools:node="remove" />
+        </provider>
         <activity android:label="@string/title_activity_main" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityMain" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

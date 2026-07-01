@@ -63,7 +63,12 @@ public class App extends Application {
 
     /* renamed from: a */
     public static void m436a(Dialog dialog) {
-        m437a(dialog, 0);
+        try {
+            m437a(dialog, 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            f464e.remove(dialog);
+        }
     }
 
     /* renamed from: a */

@@ -179,8 +179,16 @@ public class C0236d {
             j2 = C0101l.f558ah;
             i2 = 10;
         }
-        locationManager.requestLocationUpdates("gps", j2, i2, f1348j);
-        f1346h = true;
+        try {
+            locationManager.requestLocationUpdates("gps", j2, i2, f1348j);
+            f1346h = true;
+        } catch (SecurityException e) {
+            e.printStackTrace();
+            f1346h = false;
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            f1346h = false;
+        }
     }
 
     /* renamed from: f */

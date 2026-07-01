@@ -60,7 +60,7 @@ public class FlyMeService extends Service {
 
     /* renamed from: a */
     public static void m457a() {
-        if (f470f != null) {
+        if (f470f != null && f470f.f471g != null && f470f.f472h != null) {
             f470f.f471g.postDelayed(f470f.f472h, 100L);
         }
     }
