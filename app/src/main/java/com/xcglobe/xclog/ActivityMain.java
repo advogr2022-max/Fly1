@@ -311,8 +311,8 @@ public class ActivityMain extends ActivityC0090a {
     public void onCreate(Bundle bundle) {
         f433d = this;
         App.m440a((String) null);
-        App.m438a(this);
         super.onCreate(bundle);
+        App.m438a(this);
         this.f476S = true;
         if (!m423h()) {
             C0101l.m541a();
@@ -327,6 +327,12 @@ public class ActivityMain extends ActivityC0090a {
                 if (!C0236d.f1344f) {
                     arrayList.add("android.permission.ACCESS_FINE_LOCATION");
                     arrayList.add("android.permission.ACCESS_COARSE_LOCATION");
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    if (ContextCompat.checkSelfPermission(this, "android.permission.POST_NOTIFICATIONS")
+                            != PackageManager.PERMISSION_GRANTED) {
+                        arrayList.add("android.permission.POST_NOTIFICATIONS");
+                    }
                 }
                 ActivityCompat.requestPermissions(this, (String[]) arrayList.toArray(new String[0]), 123);
             } else if (!C0095f.m480i().equals(C0099j.m515a("last_run_version"))) {

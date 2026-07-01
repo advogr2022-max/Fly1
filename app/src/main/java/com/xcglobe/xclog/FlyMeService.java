@@ -68,16 +68,18 @@ public class FlyMeService extends Service {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: b */
     public Notification m458b() {
-        PendingIntent activity = PendingIntent.getActivity(this, 0, new Intent(this, (Class<?>) ActivityMain.class), 0);
+        int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                ? PendingIntent.FLAG_IMMUTABLE : 0;
+        PendingIntent activity = PendingIntent.getActivity(this, 0, new Intent(this, (Class<?>) ActivityMain.class), flags);
         String m456a = m456a(false);
         if (Build.VERSION.SDK_INT >= 26) {
             ((NotificationManager) getSystemService("notification")).createNotificationChannel(new NotificationChannel("my_channel_01", "FlyMe", 3));
-            return new Notification.Builder(this, "my_channel_01").setContentTitle(m456a).setSmallIcon(R.drawable.notification_color).setContentIntent(activity).build();
+            return new Notification.Builder(this, "my_channel_01").setContentTitle(m456a).setSmallIcon(android.R.drawable.ic_menu_mylocation).setContentIntent(activity).build();
         }
         // C0013e.b bVar = new C0013e.b(this);
         NotificationCompat.Builder bVar = new NotificationCompat.Builder(this);
         // bVar.m53a(true);
-        bVar.setContentTitle(getString(R.string.app_name)).setContentText(m456a).setContentIntent(activity).setSmallIcon(R.drawable.notification_mono);
+        bVar.setContentTitle(getString(R.string.app_name)).setContentText(m456a).setContentIntent(activity).setSmallIcon(android.R.drawable.ic_menu_mylocation);
         return bVar.build();
     }
 
@@ -100,20 +102,21 @@ public class FlyMeService extends Service {
     @Override // android.app.Service
     public int onStartCommand(Intent intent, int i2, int i3) {
         f470f = this;
-        if (intent.getAction().equals("com.xcglobe.action.startservice")) {
-            this.f471g = new Handler();
-            this.f472h = new Runnable() { // from class: com.xcglobe.xclog.FlyMeService.1
-                @Override // java.lang.Runnable
-                public void run() {
-                    FlyMeService.this.startForeground(101, FlyMeService.this.m458b());
-                }
-            };
-            this.f471g.post(this.f472h);
-        } else if (intent.getAction().equals("com.xcglobe.action.stopservice")) {
-            this.f471g.removeCallbacks(this.f472h);
-            stopForeground(true);
+        String action = intent != null ? intent.getAction() : null;
+        if ("com.xcglobe.action.startservice".equals(action)) {
+            // startForeground НЕМЕДЛЕННО — Android 8+ требует в течение 5 секунд после startForegroundService()
+            startForeground(101, m458b());
+            if (this.f471g == null) {
+                this.f471g = new Handler();
+            }
+        } else if ("com.xcglobe.action.stopservice".equals(action)) {
+            if (this.f471g != null) {
+                this.f471g.removeCallbacks(this.f472h);
+            }
+            stopForeground(STOP_FOREGROUND_REMOVE);
             stopSelf();
         }
-        return 1;
+        // Если intent == null (перезапуск системой) — оставляем service в foreground
+        return START_STICKY;
     }
 }

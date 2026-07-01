@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
@@ -257,7 +258,11 @@ public class App extends Application {
         C0101l.m568f();
         Intent intent = new Intent(activity, (Class<?>) FlyMeService.class);
         intent.setAction("com.xcglobe.action.startservice");
-        activity.startService(intent);
+        try {
+            androidx.core.content.ContextCompat.startForegroundService(activity, intent);
+        } catch (Exception e3) {
+            e3.printStackTrace();
+        }
         f461b = 1;
         C0101l.m552b();
     }
