@@ -11,6 +11,7 @@ import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
+import android.os.Build;
 import android.os.Handler;
 import com.xcglobe.xclog.App;
 
@@ -201,8 +202,12 @@ public class C0180l extends AbstractC0174f {
             m785m();
             C0184p.m815b(this);
         } else {
-            PendingIntent broadcast = PendingIntent.getBroadcast(m443b, 0, new Intent("com.xcglobe.USB_PERMISSION"), 0);
-            m443b.registerReceiver(this.f894n, new IntentFilter("com.xcglobe.USB_PERMISSION"));
+            PendingIntent broadcast = PendingIntent.getBroadcast(m443b, 0, new Intent("com.xcglobe.USB_PERMISSION"), PendingIntent.FLAG_IMMUTABLE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                m443b.registerReceiver(this.f894n, new IntentFilter("com.xcglobe.USB_PERMISSION"), Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                m443b.registerReceiver(this.f894n, new IntentFilter("com.xcglobe.USB_PERMISSION"));
+            }
             this.f891j.requestPermission(this.f892k, broadcast);
         }
     }

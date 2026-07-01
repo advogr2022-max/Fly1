@@ -8,8 +8,8 @@ android {
         applicationId "com.xcglobe.flyme"
         minSdk 23
         targetSdk 34
-        versionCode 39
-        versionName "3.12 Beta"
+        versionCode 40
+        versionName "3.12.1"
     }
 
     sourceSets {
@@ -49,6 +49,21 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.core:core:1.12.0'
-    implementation 'androidx.documentfile:documentfile:1.0.1'
+    implementation 'androidx.core:core:1.9.0'
+    implementation 'androidx.documentfile:documentfile:1.0.0'
+    // Pin transitive deps to cached versions for offline build
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    constraints {
+        implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0') {
+            because 'Force to cached version for offline build'
+        }
+        implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3') {
+            because 'Force to cached version for offline build'
+        }
+        implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3') {
+            because 'Force to cached version for offline build'
+        }
+    }
 }

@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.BLUETOOTH" android:required="false"/>
@@ -17,7 +18,7 @@
         <provider android:authorities="com.xcglobe.flyme.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
-        <activity android:label="@string/title_activity_main" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityMain">
+        <activity android:label="@string/title_activity_main" android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityMain" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -46,7 +47,7 @@
         <activity android:launchMode="singleTask" android:name="configs.ActivityConfigVario"/>
         <activity android:launchMode="singleTask" android:name="configs.ActivityConfigOpenair"/>
         <activity android:launchMode="singleTask" android:name="com.xcglobe.xclog.ActivityCloudPicker"/>
-        <service android:label="FlyMe Service" android:name="com.xcglobe.xclog.FlyMeService"/>
+        <service android:label="FlyMe Service" android:name="com.xcglobe.xclog.FlyMeService" android:exported="false"/>
         <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
     </application>
 </manifest>

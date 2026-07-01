@@ -7,12 +7,6 @@
     <item type="id" name="ab_layout_licence" />
     <item type="id" name="ab_licence" />
     <item type="id" name="ab_version" />
-    <item type="id" name="action0" />
-    <item type="id" name="action_container" />
-    <item type="id" name="action_divider" />
-    <item type="id" name="action_image" />
-    <item type="id" name="action_text" />
-    <item type="id" name="actions" />
     <item type="id" name="bt_devices_list" />
     <item type="id" name="btnAddBox" />
     <item type="id" name="btnQuit" />
@@ -31,9 +25,7 @@
     <item type="id" name="buttonUpload" />
     <item type="id" name="button_cancel" />
     <item type="id" name="button_rescan" />
-    <item type="id" name="cancel_action" />
     <item type="id" name="checkBox1" />
-    <item type="id" name="chronometer" />
     <item type="id" name="datalist_cntainer" />
     <item type="id" name="dialogButtonCancel" />
     <item type="id" name="dialogButtonChange" />
@@ -68,7 +60,6 @@
     <item type="id" name="dlg_task_start_mode" />
     <item type="id" name="dlg_task_start_time" />
     <item type="id" name="email_igc" />
-    <item type="id" name="end_padder" />
     <item type="id" name="expired_note" />
     <item type="id" name="flights_title" />
     <item type="id" name="frowTxtKmMax" />
@@ -77,53 +68,37 @@
     <item type="id" name="frowTxtUploaded" />
     <item type="id" name="glider" />
     <item type="id" name="glidertype" />
-    <item type="id" name="icon" />
-    <item type="id" name="icon_group" />
     <item type="id" name="igc_comment" />
     <item type="id" name="igc_filename" />
     <item type="id" name="igc_zipit" />
     <item type="id" name="img" />
-    <item type="id" name="info" />
     <item type="id" name="inputSearch" />
     <item type="id" name="leonardo_server" />
     <item type="id" name="licence_key" />
     <item type="id" name="lin01" />
-    <item type="id" name="line1" />
-    <item type="id" name="line3" />
     <item type="id" name="linearLayout1" />
     <item type="id" name="linearLayout3" />
     <item type="id" name="linearLayout4" />
     <item type="id" name="listView1" />
     <item type="id" name="longitude" />
-    <item type="id" name="media_actions" />
     <item type="id" name="menu_settings" />
     <item type="id" name="menurows" />
-    <item type="id" name="notification_background" />
-    <item type="id" name="notification_main_column" />
-    <item type="id" name="notification_main_column_container" />
     <item type="id" name="password" />
     <item type="id" name="pocket_button1" />
     <item type="id" name="pocket_status" />
     <item type="id" name="pocket_textView1" />
     <item type="id" name="pocket_textView2" />
     <item type="id" name="radius" />
-    <item type="id" name="right_icon" />
-    <item type="id" name="right_side" />
     <item type="id" name="screen" />
     <item type="id" name="sdscrool" />
     <item type="id" name="server" />
     <item type="id" name="ss" />
-    <item type="id" name="status_bar_latest_event_content" />
     <item type="id" name="swipe2" />
     <item type="id" name="swipeBoxes" />
-    <item type="id" name="text" />
-    <item type="id" name="text2" />
     <item type="id" name="textIgcName" />
-    <item type="id" name="time" />
     <item type="id" name="timgKm1" />
     <item type="id" name="timgKm2" />
     <item type="id" name="timgKm3" />
-    <item type="id" name="title" />
     <item type="id" name="ttxtAlt" />
     <item type="id" name="ttxtKm1" />
     <item type="id" name="ttxtKm2" />

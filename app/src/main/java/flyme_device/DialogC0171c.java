@@ -140,7 +140,11 @@ public class DialogC0171c extends Dialog {
                 DialogC0171c.this.m653b();
             }
         });
-        this.f748b.registerReceiver(this.f750d, new IntentFilter("android.bluetooth.device.action.FOUND"));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            this.f748b.registerReceiver(this.f750d, new IntentFilter("android.bluetooth.device.action.FOUND"), Context.RECEIVER_EXPORTED);
+        } else {
+            this.f748b.registerReceiver(this.f750d, new IntentFilter("android.bluetooth.device.action.FOUND"));
+        }
         m653b();
     }
 

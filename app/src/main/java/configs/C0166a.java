@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import com.xcglobe.xclog.App;
@@ -87,7 +88,11 @@ public class C0166a extends PreferenceActivity {
         this.f710l.m454a(this);
         if (this.f712n) {
             this.f709a = new a();
-            registerReceiver(this.f709a, new IntentFilter("com.xcglobe.action.main"));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(this.f709a, new IntentFilter("com.xcglobe.action.main"), Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                registerReceiver(this.f709a, new IntentFilter("com.xcglobe.action.main"));
+            }
         }
     }
 }

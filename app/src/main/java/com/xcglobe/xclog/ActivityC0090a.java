@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 
 /* renamed from: com.xcglobe.xclog.a */
@@ -85,7 +86,11 @@ public class ActivityC0090a extends Activity {
         this.f474Q.m454a(this);
         if (this.f476S) {
             this.f477a = new a();
-            registerReceiver(this.f477a, new IntentFilter("com.xcglobe.action.main"));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(this.f477a, new IntentFilter("com.xcglobe.action.main"), Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                registerReceiver(this.f477a, new IntentFilter("com.xcglobe.action.main"));
+            }
         }
     }
 }
